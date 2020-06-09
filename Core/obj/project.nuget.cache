@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2MY+T3bbU6THwvZY2pu+GaaBJpdzPANNpNdIrLfcVaPZsYA+R7CFcuxfjmdGgMmN9hYxC+wXQJn6AwNdhu5EJw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alekc\\source\\repos\\SimpleLibrary\\Core\\Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alekc\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\alekc\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
