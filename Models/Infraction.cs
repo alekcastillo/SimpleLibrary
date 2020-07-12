@@ -1,24 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    class Infraction
+    public class Infraction
     {
-        Guid Id { get; set; }
-        User User { get; set; }
-        Book Book { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
+        public int Id { get; set; }
+        public User User { get; set; }
+        public Book Book { get; set; }
 
-        public Infraction(Guid id, User user, Book book)
+        public Infraction(
+            User user,
+            Book book)
         {
-            Id = id;
             User = user;
             Book = book;
         }
 
-        public void Pay() { }
+        public void Pay() {
+        
+        }
     }
 }

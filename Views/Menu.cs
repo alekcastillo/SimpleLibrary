@@ -12,6 +12,7 @@ namespace Library.Views
 {
     public partial class Menu : Form
     {
+        private Form activeForm;
         public Menu()
         {
             InitializeComponent();
@@ -24,9 +25,9 @@ namespace Library.Views
         }
 
         public void hideSubMenu() {
-            if (panel1.Visible == true) panel1.Visible = false;
-            if (panel2.Visible == true) panel2.Visible = false;
-            if (panel3.Visible == true) panel3.Visible = false;
+            if (panel1.Visible == true) panel1.Visible = false;      
+            if (panel2.Visible == true) panel2.Visible = false; 
+            if (panel3.Visible == true) panel3.Visible = false; 
         }
 
         public void showeSubMenu(Panel subMenu)
@@ -34,6 +35,7 @@ namespace Library.Views
             if (subMenu.Visible == false)
             {
                 hideSubMenu();
+                tShow.ShowSync(subMenu);
                 subMenu.Visible = true;
             }
             else
@@ -42,7 +44,24 @@ namespace Library.Views
             }
         }
 
-        
+        //Metodo para abrir formularios hijos
+        private void OpenChildForm(Form childForm, object btnsender)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelDesktop.Controls.Add(childForm);
+            this.panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
             hideSubMenu();
@@ -51,16 +70,28 @@ namespace Library.Views
         private void bunifuFlatButton19_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            OpenChildForm(new BookCatalog(), sender);
         }
 
         private void bunifuFlatButton18_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            OpenChildForm(new BookType(), sender);
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             showeSubMenu(panel1);
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            showeSubMenu(panel2);
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            showeSubMenu(panel3);
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
@@ -122,16 +153,6 @@ namespace Library.Views
         private void bunifuFlatButton16_Click(object sender, EventArgs e)
         {
             hideSubMenu();
-        }
-
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-            showeSubMenu(panel2);
-        }
-
-        private void bunifuFlatButton5_Click(object sender, EventArgs e)
-        {
-            showeSubMenu(panel3);
         }
 
         private void bunifuFlatButton6_Click(object sender, EventArgs e)

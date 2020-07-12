@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.pnMainMenu = new System.Windows.Forms.Panel();
             this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -56,7 +57,9 @@
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.tShow = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.tShow1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.pnMainMenu.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,12 +80,13 @@
             this.pnMainMenu.Controls.Add(this.panel1);
             this.pnMainMenu.Controls.Add(this.bunifuFlatButton1);
             this.pnMainMenu.Controls.Add(this.panelLogo);
-            this.bunifuTransition1.SetDecoration(this.pnMainMenu, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.pnMainMenu, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.pnMainMenu, BunifuAnimatorNS.DecorationType.None);
             this.pnMainMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMainMenu.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnMainMenu.Location = new System.Drawing.Point(0, 0);
             this.pnMainMenu.Name = "pnMainMenu";
-            this.pnMainMenu.Size = new System.Drawing.Size(250, 536);
+            this.pnMainMenu.Size = new System.Drawing.Size(250, 820);
             this.pnMainMenu.TabIndex = 0;
             // 
             // bunifuFlatButton6
@@ -93,7 +97,8 @@
             this.bunifuFlatButton6.BorderRadius = 0;
             this.bunifuFlatButton6.ButtonText = "    Ajustes";
             this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton6, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton6, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton6, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton6.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton6.ForeColor = System.Drawing.Color.Transparent;
@@ -133,7 +138,8 @@
             this.panel3.Controls.Add(this.bunifuFlatButton15);
             this.panel3.Controls.Add(this.bunifuFlatButton9);
             this.panel3.Controls.Add(this.bunifuFlatButton10);
-            this.bunifuTransition1.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 828);
             this.panel3.Name = "panel3";
@@ -148,7 +154,8 @@
             this.bunifuFlatButton16.BorderRadius = 0;
             this.bunifuFlatButton16.ButtonText = "Eliminar reporte";
             this.bunifuFlatButton16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton16, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton16, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton16, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton16.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton16.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton16.Iconcolor = System.Drawing.Color.Transparent;
@@ -187,7 +194,8 @@
             this.bunifuFlatButton17.BorderRadius = 0;
             this.bunifuFlatButton17.ButtonText = "Agregar reporte";
             this.bunifuFlatButton17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton17, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton17, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton17, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton17.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton17.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton17.Iconcolor = System.Drawing.Color.Transparent;
@@ -226,7 +234,8 @@
             this.bunifuFlatButton14.BorderRadius = 0;
             this.bunifuFlatButton14.ButtonText = "Eliminar reporte";
             this.bunifuFlatButton14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton14, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton14, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton14, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton14.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton14.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton14.Iconcolor = System.Drawing.Color.Transparent;
@@ -265,7 +274,8 @@
             this.bunifuFlatButton15.BorderRadius = 0;
             this.bunifuFlatButton15.ButtonText = "Agregar reporte";
             this.bunifuFlatButton15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton15, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton15, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton15, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton15.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton15.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton15.Iconcolor = System.Drawing.Color.Transparent;
@@ -304,7 +314,8 @@
             this.bunifuFlatButton9.BorderRadius = 0;
             this.bunifuFlatButton9.ButtonText = "Eliminar reporte";
             this.bunifuFlatButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton9, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton9, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton9, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton9.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton9.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton9.Iconcolor = System.Drawing.Color.Transparent;
@@ -343,7 +354,8 @@
             this.bunifuFlatButton10.BorderRadius = 0;
             this.bunifuFlatButton10.ButtonText = "Agregar reporte";
             this.bunifuFlatButton10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton10, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton10, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton10, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton10.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton10.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton10.Iconcolor = System.Drawing.Color.Transparent;
@@ -382,7 +394,8 @@
             this.bunifuFlatButton5.BorderRadius = 0;
             this.bunifuFlatButton5.ButtonText = "    Reportes";
             this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton5, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton5, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton5, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton5.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton5.ForeColor = System.Drawing.Color.Transparent;
@@ -421,7 +434,8 @@
             this.panel2.Controls.Add(this.bunifuFlatButton11);
             this.panel2.Controls.Add(this.bunifuFlatButton7);
             this.panel2.Controls.Add(this.bunifuFlatButton8);
-            this.bunifuTransition1.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 530);
             this.panel2.Name = "panel2";
@@ -436,7 +450,8 @@
             this.bunifuFlatButton13.BorderRadius = 0;
             this.bunifuFlatButton13.ButtonText = "Eliminar estudiante";
             this.bunifuFlatButton13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton13, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton13, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton13, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton13.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton13.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton13.Iconcolor = System.Drawing.Color.Transparent;
@@ -475,7 +490,8 @@
             this.bunifuFlatButton12.BorderRadius = 0;
             this.bunifuFlatButton12.ButtonText = "Eliminar estudiante";
             this.bunifuFlatButton12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton12, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton12, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton12, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton12.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton12.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton12.Iconcolor = System.Drawing.Color.Transparent;
@@ -514,7 +530,8 @@
             this.bunifuFlatButton11.BorderRadius = 0;
             this.bunifuFlatButton11.ButtonText = "Eliminar estudiante";
             this.bunifuFlatButton11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton11, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton11, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton11, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton11.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton11.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton11.Iconcolor = System.Drawing.Color.Transparent;
@@ -553,7 +570,8 @@
             this.bunifuFlatButton7.BorderRadius = 0;
             this.bunifuFlatButton7.ButtonText = "Eliminar estudiante";
             this.bunifuFlatButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton7, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton7, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton7, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton7.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton7.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton7.Iconcolor = System.Drawing.Color.Transparent;
@@ -592,7 +610,8 @@
             this.bunifuFlatButton8.BorderRadius = 0;
             this.bunifuFlatButton8.ButtonText = "Agregar estudiante";
             this.bunifuFlatButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton8, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton8, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton8, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton8.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton8.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton8.Iconcolor = System.Drawing.Color.Transparent;
@@ -631,7 +650,8 @@
             this.bunifuFlatButton2.BorderRadius = 0;
             this.bunifuFlatButton2.ButtonText = "    Estudiantes";
             this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton2, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton2, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton2.ForeColor = System.Drawing.Color.Transparent;
@@ -669,7 +689,8 @@
             this.panel1.Controls.Add(this.bunifuFlatButton19);
             this.panel1.Controls.Add(this.bunifuFlatButton4);
             this.panel1.Controls.Add(this.bunifuFlatButton3);
-            this.bunifuTransition1.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 283);
             this.panel1.Name = "panel1";
@@ -682,9 +703,10 @@
             this.bunifuFlatButton18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(69)))));
             this.bunifuFlatButton18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton18.BorderRadius = 0;
-            this.bunifuFlatButton18.ButtonText = "Eliminar libro";
+            this.bunifuFlatButton18.ButtonText = "Tipo de libro";
             this.bunifuFlatButton18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton18, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton18, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton18, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton18.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton18.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton18.Iconcolor = System.Drawing.Color.Transparent;
@@ -709,7 +731,7 @@
             this.bunifuFlatButton18.selected = false;
             this.bunifuFlatButton18.Size = new System.Drawing.Size(233, 39);
             this.bunifuFlatButton18.TabIndex = 3;
-            this.bunifuFlatButton18.Text = "Eliminar libro";
+            this.bunifuFlatButton18.Text = "Tipo de libro";
             this.bunifuFlatButton18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton18.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton18.TextFont = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -721,9 +743,10 @@
             this.bunifuFlatButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(69)))));
             this.bunifuFlatButton19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton19.BorderRadius = 0;
-            this.bunifuFlatButton19.ButtonText = "Agregar libro";
+            this.bunifuFlatButton19.ButtonText = "Catálogo de libros";
             this.bunifuFlatButton19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton19, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton19, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton19, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton19.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton19.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton19.Iconcolor = System.Drawing.Color.Transparent;
@@ -748,7 +771,7 @@
             this.bunifuFlatButton19.selected = false;
             this.bunifuFlatButton19.Size = new System.Drawing.Size(233, 38);
             this.bunifuFlatButton19.TabIndex = 2;
-            this.bunifuFlatButton19.Text = "Agregar libro";
+            this.bunifuFlatButton19.Text = "Catálogo de libros";
             this.bunifuFlatButton19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton19.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton19.TextFont = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -762,7 +785,8 @@
             this.bunifuFlatButton4.BorderRadius = 0;
             this.bunifuFlatButton4.ButtonText = "Eliminar libro";
             this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton4, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton4, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton4, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton4.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
@@ -801,7 +825,8 @@
             this.bunifuFlatButton3.BorderRadius = 0;
             this.bunifuFlatButton3.ButtonText = "Agregar libro";
             this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton3, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton3, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
@@ -840,7 +865,8 @@
             this.bunifuFlatButton1.BorderRadius = 0;
             this.bunifuFlatButton1.ButtonText = "    Libros";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton1, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.bunifuFlatButton1, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.bunifuFlatButton1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton1.ForeColor = System.Drawing.Color.Transparent;
@@ -875,7 +901,8 @@
             // panelLogo
             // 
             this.panelLogo.Controls.Add(this.pictureBox1);
-            this.bunifuTransition1.SetDecoration(this.panelLogo, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.panelLogo, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.panelLogo, BunifuAnimatorNS.DecorationType.None);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
@@ -884,7 +911,8 @@
             // 
             // pictureBox1
             // 
-            this.bunifuTransition1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 37);
             this.pictureBox1.Name = "pictureBox1";
@@ -893,10 +921,42 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // bunifuTransition1
+            // tShow
             // 
-            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
-            this.bunifuTransition1.Cursor = null;
+            this.tShow.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
+            this.tShow.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.tShow.DefaultAnimation = animation1;
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.AutoSize = true;
+            this.tShow1.SetDecoration(this.panelDesktop, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this.panelDesktop, BunifuAnimatorNS.DecorationType.None);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(250, 0);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(1090, 820);
+            this.panelDesktop.TabIndex = 1;
+            // 
+            // tShow1
+            // 
+            this.tShow1.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
+            this.tShow1.Cursor = null;
             animation2.AnimateOnlyDifferences = true;
             animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
             animation2.LeafCoeff = 0F;
@@ -912,21 +972,22 @@
             animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
             animation2.TimeCoeff = 0F;
             animation2.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation2;
+            this.tShow1.DefaultAnimation = animation2;
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(977, 536);
+            this.ClientSize = new System.Drawing.Size(1340, 820);
+            this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.pnMainMenu);
-            this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
+            this.tShow1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
+            this.tShow.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(69)))));
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnMainMenu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -934,6 +995,7 @@
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -946,7 +1008,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private System.Windows.Forms.Panel panelLogo;
-        private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
+        private BunifuAnimatorNS.BunifuTransition tShow;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
@@ -965,5 +1027,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton15;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton18;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton19;
+        private System.Windows.Forms.Panel panelDesktop;
+        private BunifuAnimatorNS.BunifuTransition tShow1;
     }
 }
