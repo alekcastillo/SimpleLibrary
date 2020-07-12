@@ -34,7 +34,7 @@ namespace Library.Models
                 title,
                 new List<Book>());
 
-            dataService.BookSubjects.Append(bookSubject);
+            dataService.BookSubjects.Add(bookSubject);
 
             return bookSubject;
         }

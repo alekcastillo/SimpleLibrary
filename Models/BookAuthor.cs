@@ -34,7 +34,7 @@ namespace Library.Models
                 title,
                 new List<Book>());
 
-            dataService.BookAuthors.Append(bookAuthor);
+            dataService.BookAuthors.Add(bookAuthor);
 
             return bookAuthor;
         }
