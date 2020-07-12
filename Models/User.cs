@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,16 +10,17 @@ namespace Library.Models
 {
     public class User
     {
-        Guid Id { get; set; }
-        string Email { get; set; }
-        string Password { get; set; }
-        string FirstName { get; set; }
-        string LastName { get; set; }
-        List<Book> BorrowedBooks { get; set; }
-        List<Infraction> Infractions { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
+        public int Id { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public List<Book> BorrowedBooks { get; set; }
+        public List<Infraction> Infractions { get; set; }
 
-        public User(
-            Guid id,
+        protected User(
             string email,
             string password,
             string firstName,
@@ -25,7 +28,6 @@ namespace Library.Models
             List<Book> borrowedBooks,
             List<Infraction> infractions)
         {
-            Id = id;
             Email = email;
             Password = password;
             FirstName = firstName;
@@ -34,8 +36,21 @@ namespace Library.Models
             Infractions = infractions;
         }
 
-        public static void Add() {
+        public static User Add(
+            string email,
+            string password,
+            string firstName,
+            string lastName)
+        {
+            var user = new User(
+                email,
+                password,
+                firstName,
+                lastName,
+                new List<Book>(),
+                new List<Infraction>());
 
+            return user;
         }
 
         public bool HasActiveInfraction() 
@@ -44,7 +59,7 @@ namespace Library.Models
         }
 
         public void AddInfraction(string transactionId) {
-        
+            
         }
     }
 }

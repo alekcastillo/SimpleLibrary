@@ -1,23 +1,42 @@
-﻿using System;
+﻿using Library.Infrastructure;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    public class BookPublisher : BookCatalog
+    public class BookPublisher
     {
-        public BookPublisher(
-            Guid id,
-            string ttitle,
-            IEnumerable<Book> books
-        ) : base(id, ttitle, books)
-        {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public IEnumerable<Book> Books { get; set; }
 
+        public BookPublisher(
+            string title,
+            IEnumerable<Book> books)
+        {
+            Title = title;
+            Books = books;
         }
 
-        public static void Add() {
+        public static BookPublisher Add(
+            string title)
+        {
+            var dataService = DataService.GetInstance();
+
+            var bookPublisher = new BookPublisher(
+                title,
+                new List<Book>());
+
+            dataService.BookPublishers.Append(bookPublisher);
+
+            return bookPublisher;
         }
     }
 }
