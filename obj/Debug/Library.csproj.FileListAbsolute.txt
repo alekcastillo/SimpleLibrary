@@ -65,3 +65,7 @@ C:\Users\ROY78\Downloads\SimpleLibrary-master\SimpleLibrary-master\obj\Debug\Lib
 >>>>>>> c0e07c52dc1573d00b59e728bfbd82a1d3bce360
 C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Views.BookCatalog.resources
 C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Views.BookType.resources
+C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Views.AddBookCatalogForm.resources
+C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Views.AddBookTypeForm.resources
+C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Views.LoginForm.resources
+C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Views.MenuForm.resources

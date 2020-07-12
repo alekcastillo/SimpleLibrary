@@ -34,6 +34,7 @@ namespace Library.Models
                 title,
                 new List<Book>());
 
+            bookPublisher.Id = dataService.BookPublishers.Count;
             dataService.BookPublishers.Add(bookPublisher);
 
             return bookPublisher;

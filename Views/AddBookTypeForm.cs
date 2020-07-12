@@ -1,4 +1,5 @@
 ﻿using Library.Infrastructure;
+using Library.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Library.Views
 {
-    public partial class BookType : Form
+    public partial class AddBookTypeForm : Form
     {
-        public BookType()
+        public AddBookTypeForm()
         {
             InitializeComponent();
             var dataService = DataService.GetInstance();
@@ -30,7 +31,13 @@ namespace Library.Views
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-
+            BookType.Add(
+                txtName.Text,
+                DropSubject.selectedIndex,
+                DropAuthor.selectedIndex,
+                DropPublisher.selectedIndex,
+                Int32.Parse(txtYear.Text),
+                Int32.Parse(txtPages.Text));
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
