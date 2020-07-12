@@ -12,3 +12,11 @@ C:\Users\ROY78\OneDrive - ULACIT ED CR\UNIVERSIDAD\V CUATRIMESTRE\Diseño de apl
 C:\Users\ROY78\OneDrive - ULACIT ED CR\UNIVERSIDAD\V CUATRIMESTRE\Diseño de aplicaciones\PROYECTO\Library\bin\Debug\VisualReactiveWinForms.dll
 C:\Users\ROY78\OneDrive - ULACIT ED CR\UNIVERSIDAD\V CUATRIMESTRE\Diseño de aplicaciones\PROYECTO\Library\bin\Debug\VisualReactiveWinForms.xml
 C:\Users\ROY78\OneDrive - ULACIT ED CR\UNIVERSIDAD\V CUATRIMESTRE\Diseño de aplicaciones\PROYECTO\Library\obj\Debug\Library.Views.Menu.resources
+C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.csprojAssemblyReference.cache
+C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Properties.Resources.resources
+C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Views.Login.resources
+C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Views.Menu.resources
+C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.csproj.GenerateResource.cache
+C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.csproj.CoreCompileInputs.cache
+C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.exe
+C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.pdb

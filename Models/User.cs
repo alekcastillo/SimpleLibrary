@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    class User
+    public class User
     {
         Guid Id { get; set; }
         string Email { get; set; }
@@ -16,7 +16,14 @@ namespace Library.Models
         List<Book> BorrowedBooks { get; set; }
         List<Infraction> Infractions { get; set; }
 
-        public User(Guid id, string email, string password, string firstName, string lastName, List<Book> borrowedBooks, List<Infraction> infractions)
+        public User(
+            Guid id,
+            string email,
+            string password,
+            string firstName,
+            string lastName,
+            List<Book> borrowedBooks,
+            List<Infraction> infractions)
         {
             Id = id;
             Email = email;
@@ -27,13 +34,17 @@ namespace Library.Models
             Infractions = infractions;
         }
 
-        public static void Add() { }
+        public static void Add() {
+
+        }
 
         public bool HasActiveInfraction() 
         {
             return true;
         }
 
-        public void AddInfraction(string transactionId) { }
+        public void AddInfraction(string transactionId) {
+        
+        }
     }
 }

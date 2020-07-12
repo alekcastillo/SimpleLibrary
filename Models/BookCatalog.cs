@@ -6,19 +6,24 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    abstract class BookCatalog
+    public abstract class BookCatalog
     {
         Guid Id { get; set; }
         string Ttitle { get; set; }
         IEnumerable<Book> Books { get; set; }
-         
-        public BookCatalog(Guid id, string ttitle, IEnumerable<Book> books)
+
+        public BookCatalog(
+            Guid id,
+            string ttitle,
+            IEnumerable<Book> books)
         {
             Id = id;
             Ttitle = ttitle;
             Books = books;
         }
 
-        public static void Add() { }
+        public static void Add() {
+        
+        }
     }
 }

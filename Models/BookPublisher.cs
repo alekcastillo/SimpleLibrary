@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    class BookPublisher : BookCatalog
+    public class BookPublisher : BookCatalog
     {
-        public static void Add() { }
+        public BookPublisher(
+            Guid id,
+            string ttitle,
+            IEnumerable<Book> books
+        ) : base(id, ttitle, books)
+        {
+
+        }
+
+        public static void Add() {
+        }
     }
 }

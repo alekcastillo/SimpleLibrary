@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    class BookType
+    public class BookType
     {
         Guid Id { get; set; }
         string Title { get; set; }
@@ -16,7 +16,14 @@ namespace Library.Models
         int Year { get; set; }
         int Pages { get; set; }
 
-        public BookType(Guid id, string title, BookSubject subject, BookAuthor author, BookPublisher publisher, int year, int pages)
+        public BookType(
+            Guid id,
+            string title,
+            BookSubject subject,
+            BookAuthor author,
+            BookPublisher publisher,
+            int year,
+            int pages)
         {
             Id = id;
             Title = title;
@@ -27,6 +34,8 @@ namespace Library.Models
             Pages = pages;
         }
 
-        public static void Add() { }
+        public static void Add() {
+
+        }
     }
 }

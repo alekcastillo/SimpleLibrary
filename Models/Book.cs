@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    class Book
+    public class Book
     {
         Guid Id { get; set; }
         BookType Type { get; set; }
@@ -19,14 +19,24 @@ namespace Library.Models
             Status = status;
         }
 
-        public static void Add() { }
+        public static void Add() {
 
-        public void Lend(Guid userId) { }
+        }
 
-        public void Lend(string userEmail) { }
+        public void Lend(Guid userId) {
+        
+        }
 
-        public void SetAsLost() { }
+        public void Lend(string userEmail) {
+        
+        }
 
-        public void Return() { }
+        public void SetAsLost() {
+        
+        }
+
+        public void Return() {
+        
+        }
     }
 }

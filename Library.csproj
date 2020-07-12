@@ -54,6 +54,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\BookAuthor.cs" />
+    <Compile Include="Models\BookCatalog.cs" />
+    <Compile Include="Models\BookPublisher.cs" />
+    <Compile Include="Models\BookStatus.cs" />
+    <Compile Include="Models\BookSubject.cs" />
+    <Compile Include="Models\BookType.cs" />
+    <Compile Include="Models\Infraction.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,9 +106,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

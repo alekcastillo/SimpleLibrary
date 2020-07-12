@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    class BookSubject : BookCatalog
+    public class BookSubject : BookCatalog
     {
+        public BookSubject(
+            Guid id,
+            string ttitle,
+            IEnumerable<Book> books
+        ) : base(id, ttitle, books)
+        {
 
-        public static void Add() { }
+        }
+
+        public static void Add() {
+        
+        }
     }
 }
