@@ -35,6 +35,7 @@ C:\Users\alekc\source\repos\SimpleLibrary\bin\Debug\System.Data.SqlServerCe.dll
 C:\Users\alekc\source\repos\SimpleLibrary\bin\Debug\EntityFramework.SqlServerCompact.xml
 C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Migrations.InitialCreate.resources
 C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Migrations.second.resources
+<<<<<<< HEAD
 C:\Users\ROY78\Downloads\SimpleLibrary-master\SimpleLibrary-master\bin\Debug\Library.exe.config
 C:\Users\ROY78\Downloads\SimpleLibrary-master\SimpleLibrary-master\bin\Debug\Library.exe
 C:\Users\ROY78\Downloads\SimpleLibrary-master\SimpleLibrary-master\bin\Debug\Library.pdb
@@ -60,3 +61,5 @@ C:\Users\ROY78\Downloads\SimpleLibrary-master\SimpleLibrary-master\obj\Debug\Lib
 C:\Users\ROY78\Downloads\SimpleLibrary-master\SimpleLibrary-master\obj\Debug\Library.pdb
 C:\Users\ROY78\Downloads\SimpleLibrary-master\SimpleLibrary-master\obj\Debug\Library.Views.BookCatalog.resources
 C:\Users\ROY78\Downloads\SimpleLibrary-master\SimpleLibrary-master\obj\Debug\Library.Views.BookType.resources
+=======
+>>>>>>> c0e07c52dc1573d00b59e728bfbd82a1d3bce360

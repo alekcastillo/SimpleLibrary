@@ -33,6 +33,16 @@ namespace Library.Views
             //Console.WriteLine("Meh");
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            //_context = new LibraryContext();
+            //var user = User.Add("Test@gmail.com", "123", "Test", "Meh1");
+            //_context.Users.Add(user);
+            //_context.SaveChanges();
+            //Console.WriteLine("Meh");
+        }
+
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
 
