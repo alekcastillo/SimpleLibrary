@@ -116,6 +116,12 @@
     <Compile Include="Views\AddBookTypeForm.Designer.cs">
       <DependentUpon>AddBookTypeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\AuthorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AuthorForm.Designer.cs">
+      <DependentUpon>AuthorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,18 @@
     </Compile>
     <Compile Include="Views\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublisherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PublisherForm.Designer.cs">
+      <DependentUpon>PublisherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SubjectForm.Designer.cs">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Migrations\202007120259326_InitialCreate.resx">
       <DependentUpon>202007120259326_InitialCreate.cs</DependentUpon>
@@ -151,11 +169,20 @@
     <EmbeddedResource Include="Views\AddBookTypeForm.resx">
       <DependentUpon>AddBookTypeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AuthorForm.resx">
+      <DependentUpon>AuthorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PublisherForm.resx">
+      <DependentUpon>PublisherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SubjectForm.resx">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

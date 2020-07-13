@@ -69,3 +69,31 @@ C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Views.AddBookCatalog
 C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Views.AddBookTypeForm.resources
 C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Views.LoginForm.resources
 C:\Users\alekc\source\repos\SimpleLibrary\obj\Debug\Library.Views.MenuForm.resources
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\bin\Debug\Library.exe.config
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\bin\Debug\Library.exe
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\bin\Debug\Library.pdb
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\bin\Debug\EntityFramework.dll
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\bin\Debug\VisualReactiveWinForms.dll
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\bin\Debug\EntityFramework.xml
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\bin\Debug\VisualReactiveWinForms.xml
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.csprojAssemblyReference.cache
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.Migrations.InitialCreate.resources
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.Migrations.second.resources
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.Properties.Resources.resources
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.Views.AddBookCatalogForm.resources
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.Views.AddBookTypeForm.resources
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.Views.AuthorForm.resources
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.Views.LoginForm.resources
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.Views.MenuForm.resources
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.csproj.GenerateResource.cache
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.csproj.CoreCompileInputs.cache
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.csproj.CopyComplete
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.exe
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.pdb
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.Views.SubjectForm.resources
+C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.Views.PublisherForm.resources

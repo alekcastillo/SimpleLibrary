@@ -70,7 +70,7 @@ namespace Library.Views
         private void bunifuFlatButton19_Click(object sender, EventArgs e)
         {
             hideSubMenu();
-            OpenChildForm(new AddBookCatalogForm(1), sender);
+            OpenChildForm(new AuthorForm(), sender);
         }
 
         private void bunifuFlatButton18_Click(object sender, EventArgs e)
@@ -158,6 +158,18 @@ namespace Library.Views
         private void bunifuFlatButton6_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+        }
+
+        private void bunifuFlatButton20_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            OpenChildForm(new SubjectForm(), sender);
+        }
+
+        private void bunifuFlatButton21_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            OpenChildForm(new PublisherForm(), sender);
         }
     }
 }
