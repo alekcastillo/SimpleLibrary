@@ -80,6 +80,7 @@
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(411, 727);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(102)))), ((int)(((byte)(200)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
@@ -90,7 +91,7 @@
             this.bunifuFlatButton1.Text = "Agregar";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // pictureBox2
@@ -139,11 +140,11 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(102)))), ((int)(((byte)(200)))));
-            this.label5.Location = new System.Drawing.Point(12, 69);
+            this.label5.Location = new System.Drawing.Point(122, 72);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1066, 69);
+            this.label5.Size = new System.Drawing.Size(851, 44);
             this.label5.TabIndex = 20;
             this.label5.Text = "Ingrese toda la información";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,11 +154,11 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(102)))), ((int)(((byte)(200)))));
-            this.label1.Location = new System.Drawing.Point(12, 13);
+            this.label1.Location = new System.Drawing.Point(118, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1066, 62);
+            this.label1.Size = new System.Drawing.Size(855, 48);
             this.label1.TabIndex = 19;
             this.label1.Text = "Tipo de libro";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,6 +170,7 @@
             this.DropPublisher.ForeColor = System.Drawing.Color.White;
             this.DropPublisher.Items = new string[0];
             this.DropPublisher.Location = new System.Drawing.Point(336, 655);
+            this.DropPublisher.Margin = new System.Windows.Forms.Padding(4);
             this.DropPublisher.Name = "DropPublisher";
             this.DropPublisher.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(102)))), ((int)(((byte)(200)))));
             this.DropPublisher.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
@@ -337,6 +339,7 @@
             this.DropSubject.ForeColor = System.Drawing.Color.White;
             this.DropSubject.Items = new string[0];
             this.DropSubject.Location = new System.Drawing.Point(336, 474);
+            this.DropSubject.Margin = new System.Windows.Forms.Padding(4);
             this.DropSubject.Name = "DropSubject";
             this.DropSubject.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(102)))), ((int)(((byte)(200)))));
             this.DropSubject.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
@@ -351,6 +354,7 @@
             this.DropAuthor.ForeColor = System.Drawing.Color.White;
             this.DropAuthor.Items = new string[0];
             this.DropAuthor.Location = new System.Drawing.Point(336, 562);
+            this.DropAuthor.Margin = new System.Windows.Forms.Padding(4);
             this.DropAuthor.Name = "DropAuthor";
             this.DropAuthor.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(102)))), ((int)(((byte)(200)))));
             this.DropAuthor.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
@@ -358,12 +362,12 @@
             this.DropAuthor.Size = new System.Drawing.Size(412, 35);
             this.DropAuthor.TabIndex = 41;
             // 
-            // BookType
+            // AddBookTypeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1090, 820);
+            this.ClientSize = new System.Drawing.Size(1090, 790);
             this.Controls.Add(this.DropAuthor);
             this.Controls.Add(this.DropSubject);
             this.Controls.Add(this.pictureBox6);
@@ -386,7 +390,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "BookType";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "AddBookTypeForm";
             this.Text = "BookType";
             this.Load += new System.EventHandler(this.BookType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

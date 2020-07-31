@@ -101,8 +101,9 @@ namespace Library.Views
         }
 
         private void bunifuFlatButton8_Click(object sender, EventArgs e)
-        {
+        {           
             hideSubMenu();
+
         }
 
         private void bunifuFlatButton7_Click(object sender, EventArgs e)

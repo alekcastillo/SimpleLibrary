@@ -42,6 +42,7 @@ namespace Library.Views
         {
             Library.Views.MenuForm mn = new MenuForm();
             mn.Show();
+          
         }
     }
 }
