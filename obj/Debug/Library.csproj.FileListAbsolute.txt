@@ -97,3 +97,38 @@ C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\L
 C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.pdb
 C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.Views.SubjectForm.resources
 C:\Users\ROY78\OneDrive - ULACIT ED CR\ProyectosGitHub\SimpleLibrary\obj\Debug\Library.Views.PublisherForm.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\bin\Debug\Library.exe.config
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\bin\Debug\Library.exe
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\bin\Debug\Library.pdb
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\bin\Debug\EntityFramework.dll
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\bin\Debug\VisualReactiveWinForms.dll
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\bin\Debug\EntityFramework.xml
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\bin\Debug\VisualReactiveWinForms.xml
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.csprojAssemblyReference.cache
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Migrations.InitialCreate.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Migrations.second.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Properties.Resources.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.AddBookCatalogForm.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.AddBookTypeForm.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.AuthorForm.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.LoginForm.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.MenuForm.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.PublisherForm.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.SubjectForm.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.csproj.GenerateResource.cache
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.csproj.CoreCompileInputs.cache
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.csproj.CopyComplete
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.exe
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.pdb
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.AgregarEstudianteForm.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.ListaEstudiantesForm.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.AddEstudianteForm.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.ListaLibrosStockForm.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.AddLibros.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.ListaLibrosPrestados.resources
+C:\Users\Adrian Vinicio\Desktop\Proyecto Apps\SimpleLibrary-master\obj\Debug\Library.Views.EliminarLibro.resources
