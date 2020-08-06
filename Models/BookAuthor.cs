@@ -17,6 +17,10 @@ namespace Library.Models
         public string Title { get; set; }
         public IEnumerable<Book> Books { get; set; }
 
+        public BookAuthor()
+        {
+        }
+
         protected BookAuthor(
             string title,
             IEnumerable<Book> books)
@@ -28,14 +32,14 @@ namespace Library.Models
         public static BookAuthor Add(
             string title)
         {
-            var dataService = DataService.GetInstance();
+            var context = LibraryContext.GetInstance();
 
             var bookAuthor = new BookAuthor(
                 title,
                 new List<Book>());
 
-            bookAuthor.Id = dataService.BookAuthors.Count;
-            dataService.BookAuthors.Add(bookAuthor);
+            context.BookAuthors.Add(bookAuthor);
+            context.SaveChanges();
 
             return bookAuthor;
         }

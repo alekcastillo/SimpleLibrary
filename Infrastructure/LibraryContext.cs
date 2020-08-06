@@ -10,9 +10,19 @@ namespace Library.Infrastructure
 {
     public class LibraryContext : DbContext
     {
-        public LibraryContext()
-            : base("LibraryDataBase")
+        protected static LibraryContext instance { get; private set; }
+
+        protected LibraryContext()
+            : base("LibraryDatabase")
         { }
+
+        public static LibraryContext GetInstance()
+        {
+            if (instance == null)
+                instance = new LibraryContext();
+
+            return instance;
+        }
 
         public DbSet<BookType> BookTypes { get; set; }
         public DbSet<Book> Books { get; set; }

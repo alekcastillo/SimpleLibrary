@@ -9,6 +9,7 @@ namespace Library.Infrastructure
 {
     public class DataService
     {
+        private LibraryContext _context { get; set; }
         public List<BookAuthor> BookAuthors { get; private set; }
         public List<BookPublisher> BookPublishers { get; private set; }
         public List<BookSubject> BookSubjects { get; private set; }
@@ -33,5 +34,7 @@ namespace Library.Infrastructure
 
             return instance;
         }
+
+        public void SaveChanges() => _context.SaveChanges();
     }
 }
