@@ -14,15 +14,17 @@ namespace Library.Views
     public partial class PublisherForm : Form
     {
         int indexRow;
+        private LibraryContext _context { get; set; }
+
         public PublisherForm()
         {
+            _context = LibraryContext.GetInstance();
             InitializeComponent();
-            var dataService = DataService.GetInstance();
             DataGridPublisher.ColumnCount = 2;
             DataGridPublisher.Columns[0].Name = "Identificación";
             DataGridPublisher.Columns[1].Name = "Nombre de la editorial";
             DataGridPublisher.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            foreach (var publisher in dataService.BookPublishers)
+            foreach (var publisher in _context.BookPublishers)
             {
                 string[] row = { publisher.Id.ToString(), publisher.Title };
                 DataGridPublisher.Rows.Add(row);
@@ -37,10 +39,9 @@ namespace Library.Views
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            var dataService = DataService.GetInstance();
             var item = DataGridPublisher.SelectedRows[0].Index;
-            var publisher = dataService.BookPublishers.FirstOrDefault(bookPublisher => bookPublisher.Id == item);
-            dataService.BookPublishers.Remove(publisher);
+            var publisher = _context.BookPublishers.FirstOrDefault(bookPublisher => bookPublisher.Id == item);
+            _context.BookPublishers.Remove(publisher);
             DataGridPublisher.Rows.RemoveAt(DataGridPublisher.SelectedRows[0].Index);
         }
 
@@ -53,9 +54,8 @@ namespace Library.Views
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
-            var dataService = DataService.GetInstance();
             var item = DataGridPublisher.SelectedRows[0].Index;
-            var publisher = dataService.BookPublishers.FirstOrDefault(bookPublisher => bookPublisher.Id == item);
+            var publisher = _context.BookPublishers.FirstOrDefault(bookPublisher => bookPublisher.Id == item);
             if (publisher != null) publisher.Title = txtName.Text;
             DataGridViewRow newDataRow = DataGridPublisher.Rows[indexRow];
             newDataRow.Cells[1].Value = txtName.Text;

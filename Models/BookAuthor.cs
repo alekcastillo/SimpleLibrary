@@ -17,9 +17,9 @@ namespace Library.Models
         public string Title { get; set; }
         public IEnumerable<Book> Books { get; set; }
 
-        public BookAuthor()
-        {
-        }
+        // Ocupamos un constructor vacio para que
+        // EntityFramework mapee los valores
+        public BookAuthor() { }
 
         protected BookAuthor(
             string title,

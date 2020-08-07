@@ -15,9 +15,7 @@ namespace Library
         [STAThread]
         static void Main()
         {
-            var context = LibraryContext.GetInstance();
-            Models.BookAuthor.Add("Alek");
-            var authors = context.BookAuthors.ToList();
+            LibraryContext.GetInstance();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);            
             Application.Run(new Library.Views.LoginForm());

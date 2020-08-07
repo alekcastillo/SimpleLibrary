@@ -21,6 +21,10 @@ namespace Library.Models
         public int Year { get; set; }
         public int Pages { get; set; }
 
+        // Ocupamos un constructor vacio para que
+        // EntityFramework mapee los valores
+        public BookType() { }
+
         protected BookType(
             string title,
             BookSubject subject,
@@ -45,13 +49,13 @@ namespace Library.Models
             int year,
             int pages)
         {
-            var dataService = DataService.GetInstance();
+            var context = LibraryContext.GetInstance();
 
-            var subject = dataService.BookSubjects.FirstOrDefault(
+            var subject = context.BookSubjects.FirstOrDefault(
                 bookSubject => bookSubject.Id == subjectId);
-            var author = dataService.BookAuthors.FirstOrDefault(
+            var author = context.BookAuthors.FirstOrDefault(
                 bookAuthor => bookAuthor.Id == authorId);
-            var publisher = dataService.BookPublishers.FirstOrDefault(
+            var publisher = context.BookPublishers.FirstOrDefault(
                 bookPublisher => bookPublisher.Id == publisherId);
 
             var bookType = new BookType(
@@ -62,7 +66,8 @@ namespace Library.Models
                 year,
                 pages);
 
-            dataService.BookTypes.Append(bookType);
+            context.BookTypes.Add(bookType);
+            context.SaveChanges();
 
             return bookType;
         }

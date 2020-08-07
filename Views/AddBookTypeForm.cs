@@ -17,15 +17,15 @@ namespace Library.Views
         public AddBookTypeForm()
         {
             InitializeComponent();
-            var dataService = DataService.GetInstance();
+            var context = LibraryContext.GetInstance();
 
-            foreach (var publisher in dataService.BookPublishers)
+            foreach (var publisher in context.BookPublishers)
                 DropPublisher.AddItem(publisher.Title);
 
-            foreach (var author in dataService.BookAuthors)
+            foreach (var author in context.BookAuthors)
                 DropAuthor.AddItem(author.Title);
 
-            foreach (var subject in dataService.BookSubjects)
+            foreach (var subject in context.BookSubjects)
                 DropSubject.AddItem(subject.Title);
         }
 

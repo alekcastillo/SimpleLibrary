@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -16,17 +17,35 @@ namespace Library.Models
         public BookType Type { get; set; }
         public BookStatus Status { get; set; }
 
-        public Book(BookType type, BookStatus status)
+        // Ocupamos un constructor vacio para que
+        // EntityFramework mapee los valores
+        public Book() { }
+
+        protected Book(BookType type, BookStatus status)
         {
             Type = type;
             Status = status;
         }
 
-        public static void Add() {
+        public static Book Add(
+            int typeId)
+        {
+            var context = LibraryContext.GetInstance();
 
+            var type = context.BookTypes.FirstOrDefault(
+                bookType => bookType.Id == typeId);
+
+            var book = new Book(
+                type,
+                BookStatus.Available);
+
+            context.Books.Add(book);
+            context.SaveChanges();
+
+            return book;
         }
 
-        public void Lend(Guid userId) {
+        public void Lend(int userId) {
             
         }
 

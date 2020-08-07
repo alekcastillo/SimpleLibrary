@@ -14,15 +14,17 @@ namespace Library.Views
     public partial class SubjectForm : Form
     {
         int indexRow;
+        private LibraryContext _context { get; set; }
+
         public SubjectForm()
         {
+            var context = LibraryContext.GetInstance();
             InitializeComponent();
-            var dataService = DataService.GetInstance();
             DataGridSubject.ColumnCount = 2;
             DataGridSubject.Columns[0].Name = "Identificación";
             DataGridSubject.Columns[1].Name = "Nombre del tema";
             DataGridSubject.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            foreach (var subject in dataService.BookSubjects)
+            foreach (var subject in context.BookSubjects)
             {
                 string[] row = { subject.Id.ToString(), subject.Title };
                 DataGridSubject.Rows.Add(row);
@@ -37,10 +39,10 @@ namespace Library.Views
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            var dataService = DataService.GetInstance();
+            var context = LibraryContext.GetInstance();
             var item = DataGridSubject.SelectedRows[0].Index;
-            var subject = dataService.BookSubjects.FirstOrDefault(bookSubject => bookSubject.Id == item);
-            dataService.BookSubjects.Remove(subject);
+            var subject = context.BookSubjects.FirstOrDefault(bookSubject => bookSubject.Id == item);
+            context.BookSubjects.Remove(subject);
             DataGridSubject.Rows.RemoveAt(DataGridSubject.SelectedRows[0].Index);
         }
 
@@ -53,9 +55,8 @@ namespace Library.Views
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            var dataService = DataService.GetInstance();
             var item = DataGridSubject.SelectedRows[0].Index;
-            var subject = dataService.BookSubjects.FirstOrDefault(bookSubject => bookSubject.Id == item);
+            var subject = _context.BookSubjects.FirstOrDefault(bookSubject => bookSubject.Id == item);
             if (subject != null) subject.Title = txtName.Text;
             DataGridViewRow newDataRow = DataGridSubject.Rows[indexRow];
             newDataRow.Cells[1].Value = txtName.Text;

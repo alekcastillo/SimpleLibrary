@@ -13,13 +13,13 @@ namespace Library.Views
 {
     public partial class AuthorForm : Form
     {
-        //private DataView dv;
         int indexRow;
+        private LibraryContext _context { get; set; }
+
         public AuthorForm()
         {
+            _context = LibraryContext.GetInstance();
             InitializeComponent();
-
-            var dataService = DataService.GetInstance();
             DataGridAuthors.ColumnCount = 2;
             DataGridAuthors.Columns[0].Name = "Identificación";
             DataGridAuthors.Columns[1].Name = "Nombre del autor";
@@ -30,7 +30,7 @@ namespace Library.Views
             //DataTable dat = (DataTable)(bs.DataSource);
          
 
-            foreach (var author in dataService.BookAuthors)
+            foreach (var author in _context.BookAuthors)
             {
                 string[] row = { author.Id.ToString(), author.Title };
                 DataGridAuthors.Rows.Add(row);
@@ -54,10 +54,9 @@ namespace Library.Views
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            var dataService = DataService.GetInstance();
             var item = DataGridAuthors.SelectedRows[0].Index;
-            var author = dataService.BookAuthors.FirstOrDefault(bookAuthor => bookAuthor.Id == item);
-            dataService.BookAuthors.Remove(author);
+            var author = _context.BookAuthors.FirstOrDefault(bookAuthor => bookAuthor.Id == item);
+            _context.BookAuthors.Remove(author);
             DataGridAuthors.Rows.RemoveAt(DataGridAuthors.SelectedRows[0].Index);
         }
 
@@ -70,9 +69,8 @@ namespace Library.Views
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            var dataService = DataService.GetInstance();
             var item = DataGridAuthors.SelectedRows[0].Index;
-            var author = dataService.BookAuthors.FirstOrDefault(bookAuthor => bookAuthor.Id == item);
+            var author = _context.BookAuthors.FirstOrDefault(bookAuthor => bookAuthor.Id == item);
             if (author != null) author.Title = txtName.Text;
             DataGridViewRow newDataRow = DataGridAuthors.Rows[indexRow];
             newDataRow.Cells[1].Value = txtName.Text;

@@ -79,7 +79,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure\DataService.cs" />
     <Compile Include="Infrastructure\LibraryContext.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookAuthor.cs" />

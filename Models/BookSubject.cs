@@ -17,7 +17,11 @@ namespace Library.Models
         public string Title { get; set; }
         public IEnumerable<Book> Books { get; set; }
 
-        public BookSubject(
+        // Ocupamos un constructor vacio para que
+        // EntityFramework mapee los valores
+        public BookSubject() { }
+
+        protected BookSubject(
             string title,
             IEnumerable<Book> books)
         {
@@ -28,14 +32,14 @@ namespace Library.Models
         public static BookSubject Add(
             string title)
         {
-            var dataService = DataService.GetInstance();
+            var context = LibraryContext.GetInstance();
 
             var bookSubject = new BookSubject(
                 title,
                 new List<Book>());
 
-            bookSubject.Id = dataService.BookSubjects.Count;
-            dataService.BookSubjects.Add(bookSubject);
+            context.BookSubjects.Add(bookSubject);
+            context.SaveChanges();
 
             return bookSubject;
         }
