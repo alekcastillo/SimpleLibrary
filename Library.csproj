@@ -51,8 +51,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Bunifu_UI_v1.52">
       <HintPath>.\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -82,6 +81,7 @@
     <Compile Include="Infrastructure\LibraryContext.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookAuthor.cs" />
+    <Compile Include="Models\BookCatalogType.cs" />
     <Compile Include="Models\BookPublisher.cs" />
     <Compile Include="Models\BookStatus.cs" />
     <Compile Include="Models\BookSubject.cs" />
@@ -124,6 +124,7 @@
     <Compile Include="Views\EliminarLibro.Designer.cs">
       <DependentUpon>EliminarLibro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IReloadableForm.cs" />
     <Compile Include="Views\ListaEstudiantesForm.cs">
       <SubType>Form</SubType>
     </Compile>

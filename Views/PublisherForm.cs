@@ -33,8 +33,8 @@ namespace Library.Views
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            AddBookCatalogForm bc = new AddBookCatalogForm(3);
-            bc.Show();
+            //AddBookCatalogForm bc = new AddBookCatalogForm(3, this);
+            //bc.Show();
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)

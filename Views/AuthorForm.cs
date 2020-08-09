@@ -41,8 +41,8 @@ namespace Library.Views
         }
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            AddBookCatalogForm bc = new AddBookCatalogForm(2);
-            bc.Show();
+            //AddBookCatalogForm bc = new AddBookCatalogForm(2, this);
+            //bc.Show();
         }
 
      

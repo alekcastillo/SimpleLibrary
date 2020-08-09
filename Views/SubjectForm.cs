@@ -1,5 +1,7 @@
 ﻿using Library.Infrastructure;
+using Library.Models;
 using System;
+using Library.Interfaces;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,55 +13,63 @@ using System.Windows.Forms;
 
 namespace Library.Views
 {
-    public partial class SubjectForm : Form
+    public partial class SubjectForm : Form, IReloadableForm
     {
         int indexRow;
-        private LibraryContext _context { get; set; }
+        private LibraryContext context { get; set; }
 
         public SubjectForm()
         {
-            var context = LibraryContext.GetInstance();
+            context = LibraryContext.GetInstance();
             InitializeComponent();
             DataGridSubject.ColumnCount = 2;
             DataGridSubject.Columns[0].Name = "Identificación";
             DataGridSubject.Columns[1].Name = "Nombre del tema";
+            ReloadDataGrid();
+        }
+
+        public void ReloadDataGrid()
+        {
+            DataGridSubject.Rows.Clear();
             DataGridSubject.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             foreach (var subject in context.BookSubjects)
             {
                 string[] row = { subject.Id.ToString(), subject.Title };
                 DataGridSubject.Rows.Add(row);
             }
+
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            AddBookCatalogForm bc = new AddBookCatalogForm(1);
+            AddBookCatalogForm bc = new AddBookCatalogForm(BookCatalogType.BookSubject, this);
             bc.Show();
+        }
+
+        private int GetSelectedItemId()
+        {
+            return int.Parse(DataGridSubject.SelectedRows[0].Cells[0].Value.ToString());
+        }
+
+        private BookSubject GetSelectedSubject()
+        {
+            var itemId = GetSelectedItemId();
+            return context.BookSubjects.Single(bookSubject => bookSubject.Id == itemId);
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            var context = LibraryContext.GetInstance();
-            var item = DataGridSubject.SelectedRows[0].Index;
-            var subject = context.BookSubjects.FirstOrDefault(bookSubject => bookSubject.Id == item);
+            var subject = GetSelectedSubject();
             context.BookSubjects.Remove(subject);
+            context.SaveChanges();
             DataGridSubject.Rows.RemoveAt(DataGridSubject.SelectedRows[0].Index);
-        }
-
-        private void DataGridSubject_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            indexRow = e.RowIndex; // get the selected Row Index
-            DataGridViewRow row = DataGridSubject.Rows[indexRow];
-            txtName.Text = row.Cells[1].Value.ToString();
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            var item = DataGridSubject.SelectedRows[0].Index;
-            var subject = _context.BookSubjects.FirstOrDefault(bookSubject => bookSubject.Id == item);
-            if (subject != null) subject.Title = txtName.Text;
-            DataGridViewRow newDataRow = DataGridSubject.Rows[indexRow];
-            newDataRow.Cells[1].Value = txtName.Text;
+            var subject = GetSelectedSubject();
+            AddBookCatalogForm bc = new AddBookCatalogForm(subject, this);
+            bc.Show();
         }
 
         private void label3_Click(object sender, EventArgs e)

@@ -1,4 +1,6 @@
-﻿using Library.Models;
+﻿using Library.Infrastructure;
+using Library.Interfaces;
+using Library.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,15 +15,63 @@ namespace Library.Views
 {
     public partial class AddBookCatalogForm : Form
     {
-        private int CatalogType { get; set; }
+        private LibraryContext context { get; set; }
+        private BookCatalogType CatalogType { get; set; }
+        private IReloadableForm OriginForm { get; set; }
 
-        public AddBookCatalogForm(int catalogType)
+        private bool IsEdit { get; set; }
+
+        private BookAuthor Author { get; set; }
+
+        private BookPublisher Publisher { get; set; }
+
+        private BookSubject Subject { get; set; }
+
+
+
+        public AddBookCatalogForm(BookCatalogType catalogType, IReloadableForm originForm)
         {
+            context = LibraryContext.GetInstance();
             InitializeComponent();
             CatalogType = catalogType;
-            if (catalogType == 1) LabelData.Text = "Agregue un nuevo tema";
-            if (catalogType == 2) LabelData.Text = "Agregue un nuevo autor";
-            if (catalogType == 3) LabelData.Text = "Agregue una nueva editorial";
+            OriginForm = originForm;
+            SetTitle();
+        }
+
+        public AddBookCatalogForm(BookSubject subject, IReloadableForm originForm)
+        {
+            context = LibraryContext.GetInstance();
+            InitializeComponent();
+            CatalogType = BookCatalogType.BookSubject;
+            OriginForm = originForm;
+            IsEdit = true;
+            Subject = subject;
+            txtName.Text = Subject.Title;
+            SetTitle();
+        }
+
+        private void SetTitle()
+        {
+            var article = "un";
+            var catalogName = "";
+            var verb = IsEdit ? "Editar" : "Agregar";
+
+            switch (CatalogType)
+            {
+                case BookCatalogType.BookAuthor:
+                    catalogName = "autor";
+                    break;
+                case BookCatalogType.BookPublisher:
+                    catalogName = "editorial";
+                    article = "una";
+                    break;
+                case BookCatalogType.BookSubject:
+                    catalogName = "tema";
+                    break;
+            }
+
+            LabelData.Text = $"{verb} {article} {catalogName}";
+            btnAction.Text = verb;
         }
 
         private void CheckAuthor_OnChange(object sender, EventArgs e)
@@ -36,19 +86,41 @@ namespace Library.Views
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            switch (CatalogType)
+            if (IsEdit)
             {
-                case 1: BookSubject.Add(txtName.Text);
-                    txtName.Text = " ";
-                    break;
-                case 2: 
-                    BookAuthor.Add(txtName.Text);
-                    txtName.Text = " ";
-                    break;
-                case 3: BookPublisher.Add(txtName.Text);
-                    txtName.Text = " ";
-                    break;
+                switch (CatalogType)
+                {
+                    case BookCatalogType.BookSubject:
+                        Subject.Title = txtName.Text;
+                        context.SaveChanges();
+                        break;
+                    case BookCatalogType.BookAuthor:
+                        Author.Title = txtName.Text;
+                        context.SaveChanges();
+                        break;
+                    case BookCatalogType.BookPublisher:
+                        Publisher.Title = txtName.Text;
+                        context.SaveChanges();
+                        break;
+                }
+            } else
+            {
+                switch (CatalogType)
+                {
+                    case BookCatalogType.BookSubject:
+                        BookSubject.Add(txtName.Text);
+                        break;
+                    case BookCatalogType.BookAuthor:
+                        BookAuthor.Add(txtName.Text);
+                        break;
+                    case BookCatalogType.BookPublisher:
+                        BookPublisher.Add(txtName.Text);
+                        break;
+                }
             }
+
+            OriginForm.ReloadDataGrid();
+            Hide();
         }
 
         private void AddBookCatalogForm_Load(object sender, EventArgs e)
