@@ -20,6 +20,9 @@ namespace Library.Models
         public List<Book> BorrowedBooks { get; set; }
         public List<Infraction> Infractions { get; set; }
 
+        //Constructor Vacio
+        public User() { }
+
         protected User(
             string email,
             string password,

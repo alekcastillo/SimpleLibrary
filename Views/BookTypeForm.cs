@@ -38,7 +38,9 @@ namespace Library.Views
             DataGridBookType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             foreach (var booktype in context.BookTypes)
             {
-                string[] row = { booktype.Id.ToString(), booktype.Title, booktype.Year.ToString(), booktype.Pages.ToString()};
+                string[] row = { booktype.Id.ToString(), booktype.Title, booktype.Subject.Title,
+                    booktype.Author.Title, booktype.Publisher.Title, booktype.Year.ToString(), booktype.Pages.ToString()
+                };
                 DataGridBookType.Rows.Add(row);
             }
 
