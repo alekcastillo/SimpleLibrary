@@ -1,4 +1,6 @@
 ﻿using Library.Infrastructure;
+using Library.Interfaces;
+using Library.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,54 +13,62 @@ using System.Windows.Forms;
 
 namespace Library.Views
 {
-    public partial class PublisherForm : Form
+    public partial class PublisherForm : Form, IReloadableForm
     {
         int indexRow;
-        private LibraryContext _context { get; set; }
-
+        private LibraryContext context { get; set; }
         public PublisherForm()
         {
-            _context = LibraryContext.GetInstance();
+            context = LibraryContext.GetInstance();
             InitializeComponent();
             DataGridPublisher.ColumnCount = 2;
             DataGridPublisher.Columns[0].Name = "Identificación";
             DataGridPublisher.Columns[1].Name = "Nombre de la editorial";
+            ReloadDataGrid();
+        }
+
+        public void ReloadDataGrid()
+        {
+            DataGridPublisher.Rows.Clear();
             DataGridPublisher.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            foreach (var publisher in _context.BookPublishers)
+            foreach (var publisher in context.BookPublishers)
             {
                 string[] row = { publisher.Id.ToString(), publisher.Title };
                 DataGridPublisher.Rows.Add(row);
             }
+
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            //AddBookCatalogForm bc = new AddBookCatalogForm(3, this);
-            //bc.Show();
+            AddBookCatalogForm bc = new AddBookCatalogForm(BookCatalogType.BookPublisher, this);
+            bc.Show();
         }
 
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        private int GetSelectedItemId()
         {
-            var item = DataGridPublisher.SelectedRows[0].Index;
-            var publisher = _context.BookPublishers.FirstOrDefault(bookPublisher => bookPublisher.Id == item);
-            _context.BookPublishers.Remove(publisher);
+            return int.Parse(DataGridPublisher.SelectedRows[0].Cells[0].Value.ToString());
+        }
+
+        private BookPublisher GetSelectedPublisher()
+        {
+            var itemId = GetSelectedItemId();
+            return context.BookPublishers.Single(BookPublisher => BookPublisher.Id == itemId);
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            var publisher = GetSelectedPublisher();
+            AddBookCatalogForm bc = new AddBookCatalogForm(publisher, this);
+            bc.Show();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var publisher = GetSelectedPublisher();
+            context.BookPublishers.Remove(publisher);
+            context.SaveChanges();
             DataGridPublisher.Rows.RemoveAt(DataGridPublisher.SelectedRows[0].Index);
-        }
-
-        private void DataGridPublisher_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            indexRow = e.RowIndex; // get the selected Row Index
-            DataGridViewRow row = DataGridPublisher.Rows[indexRow];
-            txtName.Text = row.Cells[1].Value.ToString();
-        }
-
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
-        {
-            var item = DataGridPublisher.SelectedRows[0].Index;
-            var publisher = _context.BookPublishers.FirstOrDefault(bookPublisher => bookPublisher.Id == item);
-            if (publisher != null) publisher.Title = txtName.Text;
-            DataGridViewRow newDataRow = DataGridPublisher.Rows[indexRow];
-            newDataRow.Cells[1].Value = txtName.Text;
         }
     }
 }

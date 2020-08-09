@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBookTypeForm));
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAction = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -58,41 +58,41 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuFlatButton1
+            // btnAction
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(102)))), ((int)(((byte)(200)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Agregar";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(411, 727);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(102)))), ((int)(((byte)(200)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(241, 48);
-            this.bunifuFlatButton1.TabIndex = 24;
-            this.bunifuFlatButton1.Text = "Agregar";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.btnAction.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.btnAction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(102)))), ((int)(((byte)(200)))));
+            this.btnAction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAction.BorderRadius = 0;
+            this.btnAction.ButtonText = "Agregar";
+            this.btnAction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAction.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAction.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAction.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAction.Iconimage")));
+            this.btnAction.Iconimage_right = null;
+            this.btnAction.Iconimage_right_Selected = null;
+            this.btnAction.Iconimage_Selected = null;
+            this.btnAction.IconMarginLeft = 0;
+            this.btnAction.IconMarginRight = 0;
+            this.btnAction.IconRightVisible = true;
+            this.btnAction.IconRightZoom = 0D;
+            this.btnAction.IconVisible = true;
+            this.btnAction.IconZoom = 90D;
+            this.btnAction.IsTab = false;
+            this.btnAction.Location = new System.Drawing.Point(411, 727);
+            this.btnAction.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAction.Name = "btnAction";
+            this.btnAction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(102)))), ((int)(((byte)(200)))));
+            this.btnAction.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.btnAction.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAction.selected = false;
+            this.btnAction.Size = new System.Drawing.Size(241, 48);
+            this.btnAction.TabIndex = 24;
+            this.btnAction.Text = "Agregar";
+            this.btnAction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAction.Textcolor = System.Drawing.Color.White;
+            this.btnAction.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAction.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // pictureBox2
             // 
@@ -383,7 +383,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtYear);
             this.Controls.Add(this.DropPublisher);
-            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btnAction);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtName);
@@ -392,6 +392,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddBookTypeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BookType";
             this.Load += new System.EventHandler(this.BookType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -406,7 +407,7 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAction;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtName;

@@ -50,6 +50,30 @@ namespace Library.Views
             SetTitle();
         }
 
+        public AddBookCatalogForm(BookAuthor author, IReloadableForm originForm)
+        {
+            context = LibraryContext.GetInstance();
+            InitializeComponent();
+            CatalogType = BookCatalogType.BookAuthor;
+            OriginForm = originForm;
+            IsEdit = true;
+            Author = author;
+            txtName.Text = Author.Title;
+            SetTitle();
+        }
+
+        public AddBookCatalogForm(BookPublisher publisher, IReloadableForm originForm)
+        {
+            context = LibraryContext.GetInstance();
+            InitializeComponent();
+            CatalogType = BookCatalogType.BookPublisher;
+            OriginForm = originForm;
+            IsEdit = true;
+            Publisher = publisher;
+            txtName.Text = Publisher.Title;
+            SetTitle();
+        }
+
         private void SetTitle()
         {
             var article = "un";
