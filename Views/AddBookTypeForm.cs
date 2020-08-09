@@ -68,12 +68,12 @@ namespace Library.Views
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            string subject = DropSubject.selectedValue;
-            string[] sb = Regex.Split(subject, "-");
-            string author = DropAuthor.selectedValue;
-            string[] at = Regex.Split(author, "-");
-            string publisher = DropPublisher.selectedValue;
-            string[] pb = Regex.Split(publisher, "-");
+            string selectedSubject = DropSubject.selectedValue;
+            int subjectId = Int32.Parse(Regex.Split(selectedSubject, "-")[0]);
+            string selectedAuthor = DropAuthor.selectedValue;
+            int authorId = Int32.Parse(Regex.Split(selectedAuthor, "-")[0]);
+            string selectedPublisher = DropPublisher.selectedValue;
+            int publisherId = Int32.Parse(Regex.Split(selectedPublisher, "-")[0]);
 
             if (IsEdit)
             {
@@ -81,26 +81,25 @@ namespace Library.Views
                 Type.Year = Int32.Parse(txtYear.Text);
                 Type.Pages = Int32.Parse(txtPages.Text);
 
-                var subject = context.BookSubjects.FirstOrDefault(
-               bookSubject => bookSubject.Id == subjectId);
-                var author = context.BookAuthors.FirstOrDefault(
+                var subject = context.BookSubjects.Single(
+                    bookSubject => bookSubject.Id == subjectId);
+                var author = context.BookAuthors.Single(
                     bookAuthor => bookAuthor.Id == authorId);
-                var publisher = context.BookPublishers.FirstOrDefault(
+                var publisher = context.BookPublishers.Single(
                     bookPublisher => bookPublisher.Id == publisherId);
 
-                Type.Subject.Id = Int32.Parse(sb[0]);
-                Type.Author.Id = Int32.Parse(at[0]);
-                Type.Publisher.Id = Int32.Parse(pb[0]);
+                Type.Subject = subject;
+                Type.Author = author;
+                Type.Publisher = publisher;
                 context.SaveChanges();
-        
             }
             else
             {
                 BookType.Add(
                 txtName.Text,
-                Int32.Parse(sb[0]),
-                Int32.Parse(at[0]),
-                Int32.Parse(pb[0]),
+                subjectId,
+                authorId,
+                publisherId,
                 Int32.Parse(txtYear.Text),
                 Int32.Parse(txtPages.Text)); ;
             }
