@@ -19,8 +19,6 @@ namespace Library.Views
         public LoginForm()
         {
             InitializeComponent();
-            bunifuThinButton21.BackColor = Color.Transparent;
-            bunifuThinButton22.BackColor = Color.Transparent;
         }
 
         protected override void OnLoad(EventArgs e)
