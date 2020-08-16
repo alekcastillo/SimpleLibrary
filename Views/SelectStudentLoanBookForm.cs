@@ -45,9 +45,14 @@ namespace Library.Views
         private void btnAction_Click(object sender, EventArgs e)
         {
             var student = GetSelectedStudent();
-            book.Lend(student);
-            OriginForm.ReloadDataGrid();
-            Hide();
+            if (student.HasActiveInfraction())
+                MessageBox.Show("Este estudiante tiene una infraccion sin pagar, por lo cual no se le pueden prestar mas libros!");
+            else
+            {
+                book.Lend(student);
+                OriginForm.ReloadDataGrid();
+                Hide();
+            }
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)

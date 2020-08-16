@@ -61,11 +61,7 @@ namespace Library.Models
 
         public bool HasActiveInfraction() 
         {
-            return true;
-        }
-
-        public void AddInfraction(string transactionId) {
-            
+            return this.Infractions.Count > 0;
         }
     }
 }
