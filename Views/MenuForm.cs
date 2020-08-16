@@ -174,5 +174,11 @@ namespace Library.Views
             hideSubMenu();
             OpenChildForm(new PublisherForm(), sender);
         }
+
+        private void bunifuFlatButton7_Click_1(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            OpenChildForm(new InfractionsForm(), sender);
+        }
     }
 }

@@ -46,6 +46,8 @@ namespace Library.Models
                 student,
                 book);
 
+            student.Infractions.Add(infraction);
+
             context.Infractions.Add(infraction);
             context.SaveChanges();
 
