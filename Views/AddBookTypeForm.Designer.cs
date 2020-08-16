@@ -169,6 +169,7 @@
             // 
             this.DropPublisher.BackColor = System.Drawing.Color.Transparent;
             this.DropPublisher.BorderRadius = 3;
+            this.DropPublisher.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DropPublisher.ForeColor = System.Drawing.Color.White;
             this.DropPublisher.Items = new string[0];
             this.DropPublisher.Location = new System.Drawing.Point(336, 655);
@@ -336,8 +337,11 @@
             // 
             // DropSubject
             // 
+            this.DropSubject.AccessibleDescription = "";
+            this.DropSubject.AccessibleName = "";
             this.DropSubject.BackColor = System.Drawing.Color.Transparent;
             this.DropSubject.BorderRadius = 3;
+            this.DropSubject.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DropSubject.ForeColor = System.Drawing.Color.White;
             this.DropSubject.Items = new string[0];
             this.DropSubject.Location = new System.Drawing.Point(336, 474);
@@ -348,11 +352,13 @@
             this.DropSubject.selectedIndex = -1;
             this.DropSubject.Size = new System.Drawing.Size(412, 35);
             this.DropSubject.TabIndex = 40;
+            this.DropSubject.Tag = "";
             // 
             // DropAuthor
             // 
             this.DropAuthor.BackColor = System.Drawing.Color.Transparent;
             this.DropAuthor.BorderRadius = 3;
+            this.DropAuthor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DropAuthor.ForeColor = System.Drawing.Color.White;
             this.DropAuthor.Items = new string[0];
             this.DropAuthor.Location = new System.Drawing.Point(336, 562);

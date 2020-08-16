@@ -58,6 +58,7 @@
             this.label1.TabIndex = 59;
             this.label1.Text = "Lista de editoriales";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbAutores
             // 
@@ -70,6 +71,7 @@
             this.lbAutores.TabIndex = 58;
             this.lbAutores.Text = "Editoriales";
             this.lbAutores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbAutores.Click += new System.EventHandler(this.lbAutores_Click);
             // 
             // pictureBox2
             // 
@@ -81,6 +83,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 54;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label7
             // 
@@ -93,6 +96,7 @@
             this.label7.TabIndex = 53;
             this.label7.Text = "Ingrese el nombre de la editorial a buscar";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // btnEdit
             // 
@@ -172,6 +176,7 @@
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(259, 35);
             this.txtFilter.TabIndex = 55;
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
             // DataGridPublisher
             // 
@@ -224,6 +229,7 @@
             this.DataGridPublisher.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridPublisher.Size = new System.Drawing.Size(1013, 349);
             this.DataGridPublisher.TabIndex = 51;
+            this.DataGridPublisher.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridPublisher_CellContentClick);
             // 
             // btnAdd
             // 

@@ -70,5 +70,35 @@ namespace Library.Views
             context.SaveChanges();
             DataGridPublisher.Rows.RemoveAt(DataGridPublisher.SelectedRows[0].Index);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFilter_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridPublisher_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lbAutores_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
