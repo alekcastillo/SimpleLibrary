@@ -71,5 +71,10 @@ namespace Library.Views
         {
 
         }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }

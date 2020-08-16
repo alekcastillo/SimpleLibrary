@@ -65,14 +65,10 @@ namespace Library.Views
             //context.Books.Remove(subject);
             //context.SaveChanges();
             //DataGridBook.Rows.RemoveAt(DataGridBook.SelectedRows[0].Index);
-        }
+            SelectStudentLoanBookForm sb = new SelectStudentLoanBookForm();
+            sb.Show();
 
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
-        {
-            var subject = GetSelectedBook();
-            AddBookCatalogForm bc = new AddBookCatalogForm(subject, this);
-            bc.Show();
-        }
+        } 
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -112,6 +108,11 @@ namespace Library.Views
             else
                 btnAction.Text = "Marcar copia como...";
 
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }

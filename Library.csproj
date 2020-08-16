@@ -166,6 +166,12 @@
     <Compile Include="Views\PublisherForm.Designer.cs">
       <DependentUpon>PublisherForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SelectStudentLoanBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SelectStudentLoanBookForm.Designer.cs">
+      <DependentUpon>SelectStudentLoanBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\StudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PublisherForm.resx">
       <DependentUpon>PublisherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SelectStudentLoanBookForm.resx">
+      <DependentUpon>SelectStudentLoanBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>

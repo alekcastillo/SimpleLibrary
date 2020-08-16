@@ -67,7 +67,7 @@
             this.txtName.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(216)))));
             this.txtName.LineThickness = 3;
             this.txtName.Location = new System.Drawing.Point(399, 309);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(332, 44);
             this.txtName.TabIndex = 14;
@@ -117,7 +117,7 @@
             this.btnAction.IconZoom = 90D;
             this.btnAction.IsTab = false;
             this.btnAction.Location = new System.Drawing.Point(423, 469);
-            this.btnAction.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAction.Margin = new System.Windows.Forms.Padding(4);
             this.btnAction.Name = "btnAction";
             this.btnAction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(102)))), ((int)(((byte)(200)))));
             this.btnAction.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
@@ -150,7 +150,7 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(16, 21);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(27, 25);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(51, 50);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

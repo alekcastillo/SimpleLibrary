@@ -37,7 +37,7 @@ namespace Library.Models
 
             var book = new Book(
                 type,
-                BookStatus.Available);
+                BookStatus.Disponible);
 
             context.Books.Add(book);
             context.SaveChanges();
@@ -54,7 +54,7 @@ namespace Library.Models
         }
 
         public void SetAsLost() {
-            Status = BookStatus.Lost;
+            Status = BookStatus.Perdido;
         }
 
         public void Return() {
