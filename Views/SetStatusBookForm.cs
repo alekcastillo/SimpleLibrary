@@ -35,6 +35,13 @@ namespace Library.Views
             student.BorrowedBooks.Remove(book);
             context.SaveChanges();
             MessageBox.Show("El libro se ha marcado como devuelto correctamente!");
+            var emailService = EmailService.GetInstance();
+            emailService.SendEmail(
+                student.Email,
+                "Perdida de libro",
+                $"Hola {student.FirstName}!\n" +
+                $"Este correo es para informarte que hemos registrado que el libro que te prestamos, '{book.Type.Title}', ha sido marcado como devuelto.\n" +
+                $"Gracias por utilizar nuestro servicio!");
             OriginForm.ReloadDataGrid();
             Hide();
         }
@@ -49,6 +56,14 @@ namespace Library.Views
             Infraction.Add(student.Id, book.Id);
             context.SaveChanges();
             MessageBox.Show("El libro se ha marcado como perdido, y se ha añadido una infraccion de 5000 colones al estudiante!");
+            var emailService = EmailService.GetInstance();
+            emailService.SendEmail(
+                student.Email,
+                "Perdida de libro",
+                $"Hola {student.FirstName}!\n" +
+                $"Este correo es para informarte que hemos registrado que el libro que te prestamos, '{book.Type.Title}', ha sido marcado como perdido.\n" +
+                $"Por este motivo, se ha aplicado una multa de 5000 colones a tu cuenta, y no podras usar el servicio hasta pagarla en caja.\n" +
+                $"Gracias por tu comprension!");
             OriginForm.ReloadDataGrid();
             Hide();
         }
