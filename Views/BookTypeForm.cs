@@ -108,5 +108,11 @@ namespace Library.Views
         {
 
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            BookStockForm bc = new BookStockForm(GetSelectedBookType());
+            bc.Show();
+        }
     }
 }

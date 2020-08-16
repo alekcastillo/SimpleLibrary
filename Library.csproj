@@ -141,30 +141,10 @@
     <Compile Include="Views\BookTypeForm.Designer.cs">
       <DependentUpon>BookTypeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\EliminarLibro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\EliminarLibro.Designer.cs">
-      <DependentUpon>EliminarLibro.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interfaces\IReloadableForm.cs" />
-    <Compile Include="Views\InfractionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Views\InfractionForm.cs" />
     <Compile Include="Views\InfractionForm.Designer.cs">
       <DependentUpon>InfractionForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ListaLibrosPrestados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ListaLibrosPrestados.Designer.cs">
-      <DependentUpon>ListaLibrosPrestados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ListaLibrosStockForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ListaLibrosStockForm.Designer.cs">
-      <DependentUpon>ListaLibrosStockForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginForm.cs">
       <SubType>Form</SubType>
@@ -191,6 +171,12 @@
     </Compile>
     <Compile Include="Views\StudentForm.Designer.cs">
       <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BookStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BookStockForm.Designer.cs">
+      <DependentUpon>BookStockForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SubjectForm.cs">
       <SubType>Form</SubType>
@@ -225,17 +211,8 @@
     <EmbeddedResource Include="Views\BookTypeForm.resx">
       <DependentUpon>BookTypeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\EliminarLibro.resx">
-      <DependentUpon>EliminarLibro.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\InfractionForm.resx">
       <DependentUpon>InfractionForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ListaLibrosPrestados.resx">
-      <DependentUpon>ListaLibrosPrestados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ListaLibrosStockForm.resx">
-      <DependentUpon>ListaLibrosStockForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -248,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BookStockForm.resx">
+      <DependentUpon>BookStockForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SubjectForm.resx">
       <DependentUpon>SubjectForm.cs</DependentUpon>

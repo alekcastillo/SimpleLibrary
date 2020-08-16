@@ -8,8 +8,8 @@ namespace Library.Models
 {
     public enum BookStatus
     {
-        Available = 1,
-        Borrowed = 2,
-        Lost = 3
+        Disponible = 1,
+        Prestado = 2,
+        Perdido = 3
     }
 }
