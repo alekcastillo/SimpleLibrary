@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Library.Infrastructure;
+using Library.Interfaces;
+using Library.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +15,40 @@ namespace Library.Views
 {
     public partial class SetStatusBookForm : Form
     {
-        public SetStatusBookForm()
+        private LibraryContext context { get; set; }
+        private IReloadableForm OriginForm { get; set; }
+        private Book book { get; set; }
+
+        public SetStatusBookForm(Book book, IReloadableForm originForm)
         {
+            this.book = book;
+            context = LibraryContext.GetInstance();
             InitializeComponent();
+            OriginForm = originForm;
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            book.Status = BookStatus.Disponible;
+            var student = context.Students.Single(borrowerStudent =>
+                borrowerStudent.BorrowedBooks.Contains(book));
+            student.BorrowedBooks.Remove(book);
+            context.SaveChanges();
+            OriginForm.ReloadDataGrid();
+            Hide();
+        }
 
+        private void btnAction_Click(object sender, EventArgs e)
+        {
+            book.Status = BookStatus.Perdido;
+            var studentList = context.Students.Include("BorrowedBooks").ToList();
+            var student = studentList.Single(borrowerStudent =>
+                borrowerStudent.BorrowedBooks.Contains(book));
+            student.BorrowedBooks.Remove(book);
+            Infraction.Add(student.Id, book.Id);
+            context.SaveChanges();
+            OriginForm.ReloadDataGrid();
+            Hide();
         }
     }
 }

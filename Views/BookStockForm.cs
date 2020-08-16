@@ -62,8 +62,15 @@ namespace Library.Views
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             var book = GetSelectedBook();
-            SelectStudentLoanBookForm sb = new SelectStudentLoanBookForm(book, this);
-            sb.Show();
+            if (book.Status == BookStatus.Disponible)
+            {
+                var sb = new SelectStudentLoanBookForm(book, this);
+                sb.Show();
+            } else
+            {
+                var sb = new SetStatusBookForm(book, this);
+                sb.Show();
+            }
         } 
 
         private void label3_Click(object sender, EventArgs e)

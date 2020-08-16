@@ -107,12 +107,6 @@ namespace Library.Views
 
         }
 
-        private void bunifuFlatButton7_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-            OpenChildForm(new InfractionForm(), sender);
-        }
-
         private void bunifuFlatButton11_Click(object sender, EventArgs e)
         {
             hideSubMenu();
