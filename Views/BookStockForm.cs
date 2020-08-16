@@ -48,20 +48,20 @@ namespace Library.Views
             ReloadDataGrid();
         }
 
-        private int GetSelectedItemId()
-        {
-            return int.Parse(DataGridBook.SelectedRows[0].Cells[0].Value.ToString());
-        }
+        //private int GetSelectedItemId()
+        //{
+        //    //return int.Parse(DataGridBook.SelectedRows[0].Cells[0].Value.ToString());
+        //}
 
-        private Book GetSelectedBook()
-        {
-            var itemId = GetSelectedItemId();
-            return context.Books.Single(bookStock => bookStock.Id == itemId);
-        }
+        //private Book GetSelectedBook()
+        //{
+        //    var itemId = int.Parse(DataGridBook.SelectedRows[0].Cells[0].Value.ToString());
+        //    return context.Books.Single(bookStock => bookStock.Id == itemId);
+        //}
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            var book = GetSelectedBook();
+            //var book = GetSelectedBook();
             //context.Books.Remove(subject);
             //context.SaveChanges();
             //DataGridBook.Rows.RemoveAt(DataGridBook.SelectedRows[0].Index);
@@ -102,11 +102,11 @@ namespace Library.Views
 
         private void DataGridBook_SelectionChanged(object sender, EventArgs e)
         {
-            var book = GetSelectedBook();
-            if (book.Status == BookStatus.Disponible)
-                btnAction.Text = "Prestar copia";
-            else
-                btnAction.Text = "Marcar copia como...";
+        //    var book = GetSelectedBook();
+        //    if (book.Status == BookStatus.Disponible)
+        //        btnAction.Text = "Prestar copia";
+        //    else
+        //        btnAction.Text = "Marcar copia como...";
 
         }
 

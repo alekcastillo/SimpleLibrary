@@ -172,6 +172,12 @@
     <Compile Include="Views\SelectStudentLoanBookForm.Designer.cs">
       <DependentUpon>SelectStudentLoanBookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SetStatusBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SetStatusBookForm.Designer.cs">
+      <DependentUpon>SetStatusBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\StudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SelectStudentLoanBookForm.resx">
       <DependentUpon>SelectStudentLoanBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SetStatusBookForm.resx">
+      <DependentUpon>SetStatusBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>

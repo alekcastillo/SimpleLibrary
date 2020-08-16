@@ -39,5 +39,15 @@ namespace Library.Views
         {
             Hide();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SelectStudentLoanBookForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
