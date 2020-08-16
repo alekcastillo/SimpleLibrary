@@ -95,6 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\EmailService.cs" />
     <Compile Include="Infrastructure\LibraryContext.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookAuthor.cs" />

@@ -1,4 +1,5 @@
 ﻿using Library.Infrastructure;
+using Library.Interfaces;
 using Library.Models;
 using System;
 using System.Collections.Generic;
@@ -16,13 +17,15 @@ namespace Library.Views
     public partial class SelectStudentLoanBookForm : Form
     {
         private LibraryContext context { get; set; }
+        private IReloadableForm OriginForm { get; set; }
         private Book book { get; set; }
 
-        public SelectStudentLoanBookForm(Book book)
+        public SelectStudentLoanBookForm(Book book, IReloadableForm originForm)
         {
             this.book = book;
             context = LibraryContext.GetInstance();
             InitializeComponent();
+            OriginForm = originForm;
             FillDropdown();
         }
 
@@ -43,7 +46,8 @@ namespace Library.Views
         {
             var student = GetSelectedStudent();
             book.Lend(student);
-            this.Hide();
+            OriginForm.ReloadDataGrid();
+            Hide();
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)

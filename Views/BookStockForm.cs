@@ -48,21 +48,21 @@ namespace Library.Views
             ReloadDataGrid();
         }
 
-        private int GetSelectedItemId()
+        private int GetSelectedBookId()
         {
             return int.Parse(DataGridBook.SelectedRows[0].Cells[0].Value.ToString());
         }
 
         private Book GetSelectedBook()
         {
-            var itemId = int.Parse(DataGridBook.SelectedRows[0].Cells[0].Value.ToString());
+            var itemId = GetSelectedBookId();
             return context.Books.Single(bookStock => bookStock.Id == itemId);
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             var book = GetSelectedBook();
-            SelectStudentLoanBookForm sb = new SelectStudentLoanBookForm(book);
+            SelectStudentLoanBookForm sb = new SelectStudentLoanBookForm(book, this);
             sb.Show();
         } 
 

@@ -10,8 +10,21 @@ namespace Library.Infrastructure
 {
     public class EmailService
     {
+        protected static EmailService instance { get; private set; }
+
         private static readonly string EMAIL = "simplelibraryproject@gmail.com";
         private static readonly string PASSWORD = "SimpleLibrary2020";
+
+        protected EmailService()
+        { }
+
+        public static EmailService GetInstance()
+        {
+            if (instance == null)
+                instance = new EmailService();
+
+            return instance;
+        }
 
         public void SendEmail(string to, string subject, string body)
         {

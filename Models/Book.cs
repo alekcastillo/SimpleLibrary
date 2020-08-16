@@ -49,9 +49,15 @@ namespace Library.Models
         public void Lend(Student student)
         {
             var context = LibraryContext.GetInstance();
+            var emailService = EmailService.GetInstance();
             student.BorrowedBooks.Add(this);
             this.Status = BookStatus.Prestado;
             context.SaveChanges();
+            emailService.SendEmail(
+                student.Email,
+                "Prestamo de libro",
+                $"Hola {student.FirstName}! \n" +
+                $"Este correo es para informarte que hemos registrado tu prestamo del libro '{this.Type.Title}'. Gracias por utilizar nuestro servicio!");
         }
 
         public void SetAsLost() {
