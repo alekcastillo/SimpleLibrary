@@ -62,6 +62,7 @@ namespace Library.Views
             var subject = GetSelectedSubject();
             context.BookSubjects.Remove(subject);
             context.SaveChanges();
+            MessageBox.Show("El tema se ha eliminado correctamente!");
             DataGridSubject.Rows.RemoveAt(DataGridSubject.SelectedRows[0].Index);
         }
 

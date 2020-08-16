@@ -68,6 +68,7 @@ namespace Library.Views
             var publisher = GetSelectedPublisher();
             context.BookPublishers.Remove(publisher);
             context.SaveChanges();
+            MessageBox.Show("La editorial se ha eliminado correctamente!");
             DataGridPublisher.Rows.RemoveAt(DataGridPublisher.SelectedRows[0].Index);
         }
 

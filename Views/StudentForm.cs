@@ -62,6 +62,7 @@ namespace Library.Views
             var student = GetSelectedStudent();
             context.Students.Remove(student);
             context.SaveChanges();
+            MessageBox.Show("El estudiante se ha eliminado correctamente!");
             DataGridStudent.Rows.RemoveAt(DataGridStudent.SelectedRows[0].Index);
         }
 

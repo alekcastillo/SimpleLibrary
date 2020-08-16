@@ -54,13 +54,15 @@ namespace Library.Views
                 Student.FirstName = txtName.Text;
                 Student.LastName = txtLastName.Text;
                 context.SaveChanges();
+                MessageBox.Show("El estudiante se ha actualizado correctamente!");
             }
             else
             {
                 Student.Add(
                     txtEmail.Text,
                     txtName.Text,
-                    txtLastName.Text); 
+                    txtLastName.Text);
+                MessageBox.Show("El estudiante se ha agregado correctamente!");
             }
 
             OriginForm.ReloadDataGrid();

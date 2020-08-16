@@ -24,6 +24,7 @@ namespace Library.Views
             bookType = type;
             context = LibraryContext.GetInstance();
             InitializeComponent();
+            label1.Text = type.Title;
             DataGridBook.ColumnCount = 2;
             DataGridBook.Columns[0].Name = "Identificación";
             DataGridBook.Columns[1].Name = "Estado";
@@ -45,6 +46,7 @@ namespace Library.Views
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             Book.Add(bookType.Id);
+            MessageBox.Show("Se ha agregado una nueva copia de este libro correctamente!");
             ReloadDataGrid();
         }
 

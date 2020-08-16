@@ -55,6 +55,7 @@ namespace Library.Views
             var infraction = GetSelectedInfraction();
             context.Infractions.Remove(infraction);
             context.SaveChanges();
+            MessageBox.Show("La infraccion se ha eliminado correctamente!");
             DataGridInfraction.Rows.RemoveAt(DataGridInfraction.SelectedRows[0].Index);
         }
     }

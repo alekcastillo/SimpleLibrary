@@ -50,6 +50,7 @@ namespace Library.Views
             else
             {
                 book.Lend(student);
+                MessageBox.Show("Libro prestado correctamente!");
                 OriginForm.ReloadDataGrid();
                 Hide();
             }

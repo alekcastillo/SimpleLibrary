@@ -92,6 +92,7 @@ namespace Library.Views
                 Type.Author = author;
                 Type.Publisher = publisher;
                 context.SaveChanges();
+                MessageBox.Show("El tipo de libro se ha actualizado correctamente!");
             }
             else
             {
@@ -101,9 +102,9 @@ namespace Library.Views
                 authorId,
                 publisherId,
                 Int32.Parse(txtYear.Text),
-                Int32.Parse(txtPages.Text)); ;
+                Int32.Parse(txtPages.Text));
+                MessageBox.Show("El tipo de libro se ha agregado correctamente!");
             }
-
             OriginForm.ReloadDataGrid();
             Hide();
         }

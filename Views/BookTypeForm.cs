@@ -69,6 +69,7 @@ namespace Library.Views
             var BookType = GetSelectedBookType();
             context.BookTypes.Remove(BookType);
             context.SaveChanges();
+            MessageBox.Show("El tipo de libro se ha eliminado correctamente!");
             DataGridBookType.Rows.RemoveAt(DataGridBookType.SelectedRows[0].Index);
         }
 

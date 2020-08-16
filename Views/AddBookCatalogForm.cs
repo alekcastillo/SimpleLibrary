@@ -127,6 +127,7 @@ namespace Library.Views
                         context.SaveChanges();
                         break;
                 }
+                MessageBox.Show("El catalogo se ha actualizado correctamente!");
             } else
             {
                 switch (CatalogType)
@@ -141,6 +142,7 @@ namespace Library.Views
                         BookPublisher.Add(txtName.Text);
                         break;
                 }
+                MessageBox.Show("El catalogo se ha agregado correctamente!");
             }
 
             OriginForm.ReloadDataGrid();

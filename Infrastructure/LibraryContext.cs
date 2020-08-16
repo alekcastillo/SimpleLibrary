@@ -24,6 +24,7 @@ namespace Library.Infrastructure
             return instance;
         }
 
+        public DbSet<User> Users { get; set; }
         public DbSet<BookType> BookTypes { get; set; }
         public DbSet<Book> Books { get; set; }
         public DbSet<BookAuthor> BookAuthors { get; set; }

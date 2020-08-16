@@ -38,9 +38,15 @@ namespace Library.Views
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
-            Library.Views.MenuForm mn = new MenuForm();
-            mn.Show();
-          
+            var context = LibraryContext.GetInstance();
+            var loggedUser = context.Users.FirstOrDefault(user => user.Email == txtEmail.Text && user.Password == txtPassword.Text);
+            if (loggedUser != null)
+            {
+                Library.Views.MenuForm mn = new MenuForm();
+                mn.Show();
+            }
+            else
+                MessageBox.Show("Usuario o contraseña incorrectos! Intenta denuevo");
         }
     }
 }

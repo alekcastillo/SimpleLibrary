@@ -34,6 +34,7 @@ namespace Library.Views
                 borrowerStudent.BorrowedBooks.Contains(book));
             student.BorrowedBooks.Remove(book);
             context.SaveChanges();
+            MessageBox.Show("El libro se ha marcado como devuelto correctamente!");
             OriginForm.ReloadDataGrid();
             Hide();
         }
@@ -47,6 +48,7 @@ namespace Library.Views
             student.BorrowedBooks.Remove(book);
             Infraction.Add(student.Id, book.Id);
             context.SaveChanges();
+            MessageBox.Show("El libro se ha marcado como perdido, y se ha añadido una infraccion de 5000 colones al estudiante!");
             OriginForm.ReloadDataGrid();
             Hide();
         }

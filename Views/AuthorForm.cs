@@ -61,6 +61,7 @@ namespace Library.Views
             var author = GetSelectedAuthor();
             context.BookAuthors.Remove(author);
             context.SaveChanges();
+            MessageBox.Show("El autor se ha eliminado correctamente!");
             DataGridAuthors.Rows.RemoveAt(DataGridAuthors.SelectedRows[0].Index);
         }
 

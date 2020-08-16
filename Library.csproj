@@ -105,6 +105,7 @@
     <Compile Include="Models\BookSubject.cs" />
     <Compile Include="Models\BookType.cs" />
     <Compile Include="Models\Infraction.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Views\AddBookCatalogForm.cs">
       <SubType>Form</SubType>
@@ -117,12 +118,6 @@
     </Compile>
     <Compile Include="Views\AddBookTypeForm.Designer.cs">
       <DependentUpon>AddBookTypeForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\AddLibros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\AddLibros.Designer.cs">
-      <DependentUpon>AddLibros.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AddStudentForm.cs">
       <SubType>Form</SubType>
@@ -213,9 +208,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AddBookTypeForm.resx">
       <DependentUpon>AddBookTypeForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\AddLibros.resx">
-      <DependentUpon>AddLibros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
