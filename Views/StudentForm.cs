@@ -32,9 +32,9 @@ namespace Library.Views
         {
             DataGridStudent.Rows.Clear();
             DataGridStudent.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            foreach (var user in context.Users)
+            foreach (var student in context.Students)
             {
-                string[] row = { user.Id.ToString(), user.FirstName, user.LastName, user.Email};
+                string[] row = { student.Id.ToString(), student.FirstName, student.LastName, student.Email};
                 DataGridStudent.Rows.Add(row);
             }
 
@@ -46,29 +46,29 @@ namespace Library.Views
             bc.Show();
         }
 
-        private int GetSelectedItemId()
+        private int GetSelectedStudentId()
         {
             return int.Parse(DataGridStudent.SelectedRows[0].Cells[0].Value.ToString());
         }
 
-        private User GetSelectedBookType()
+        private Student GetSelectedStudent()
         {
-            var itemId = GetSelectedItemId();
-            return context.Users.Single(User => User.Id == itemId);
+            var studentId = GetSelectedStudentId();
+            return context.Students.Single(student => student.Id == studentId);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var user = GetSelectedBookType();
-            context.Users.Remove(user);
+            var student = GetSelectedStudent();
+            context.Students.Remove(student);
             context.SaveChanges();
             DataGridStudent.Rows.RemoveAt(DataGridStudent.SelectedRows[0].Index);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            var user = GetSelectedBookType();
-            AddStudentForm bc = new AddStudentForm(user, this);
+            var student = GetSelectedStudent();
+            AddStudentForm bc = new AddStudentForm(student, this);
             bc.Show();
         }
     }

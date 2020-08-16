@@ -14,7 +14,7 @@ namespace Library.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Id { get; set; }
-        public User User { get; set; }
+        public Student Student { get; set; }
         public Book Book { get; set; }
 
         // Ocupamos un constructor vacio para que
@@ -23,27 +23,27 @@ namespace Library.Models
         
 
         protected Infraction(
-            User user,
+            Student student,
             Book book)
         {
-            User = user;
+            Student = student;
             Book = book;
         }
 
         public static Infraction Add(
-            int userId,
+            int studentId,
             int bookId)
         {
             var context = LibraryContext.GetInstance();
 
-            var user = context.Users.FirstOrDefault(
-                infractionUser => infractionUser.Id == userId);
+            var student = context.Students.FirstOrDefault(
+                infractionStudent => infractionStudent.Id == studentId);
 
             var book = context.Books.FirstOrDefault(
                 infractionBook => infractionBook.Id == bookId);
 
             var infraction = new Infraction(
-                user,
+                student,
                 book);
 
             context.Infractions.Add(infraction);

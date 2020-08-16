@@ -1,4 +1,5 @@
 ﻿using Library.Infrastructure;
+using Library.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,8 +16,11 @@ namespace Library.Views
     public partial class SelectStudentLoanBookForm : Form
     {
         private LibraryContext context { get; set; }
-        public SelectStudentLoanBookForm()
+        private Book book { get; set; }
+
+        public SelectStudentLoanBookForm(Book book)
         {
+            this.book = book;
             context = LibraryContext.GetInstance();
             InitializeComponent();
             FillDropdown();
@@ -24,15 +28,22 @@ namespace Library.Views
 
         private void FillDropdown()
         {
-            foreach (var student in context.Users)
+            foreach (var student in context.Students)
                 DropStudent.AddItem($"{student.Id}-{student.FirstName} {student.LastName}");
+        }
+
+        private Student GetSelectedStudent()
+        {
+            string selectedStudent = DropStudent.selectedValue;
+            var studentId = Int32.Parse(Regex.Split(selectedStudent, "-")[0]);
+            return context.Students.Single(student => student.Id == studentId);
         }
 
         private void btnAction_Click(object sender, EventArgs e)
         {
-            string selectedStudent = DropStudent.selectedValue;
-            int StudentId = Int32.Parse(Regex.Split(selectedStudent, "-")[0]);
-            MessageBox.Show($"ID del estudiantes {StudentId}");
+            var student = GetSelectedStudent();
+            book.Lend(student);
+            this.Hide();
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)

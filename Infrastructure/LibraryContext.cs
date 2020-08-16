@@ -29,7 +29,7 @@ namespace Library.Infrastructure
         public DbSet<BookAuthor> BookAuthors { get; set; }
         public DbSet<BookPublisher> BookPublishers { get; set; }
         public DbSet<BookSubject> BookSubjects { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<Student> Students { get; set; }
         public DbSet<Infraction> Infractions { get; set; }
     }
 }

@@ -48,26 +48,22 @@ namespace Library.Views
             ReloadDataGrid();
         }
 
-        //private int GetSelectedItemId()
-        //{
-        //    //return int.Parse(DataGridBook.SelectedRows[0].Cells[0].Value.ToString());
-        //}
+        private int GetSelectedItemId()
+        {
+            return int.Parse(DataGridBook.SelectedRows[0].Cells[0].Value.ToString());
+        }
 
-        //private Book GetSelectedBook()
-        //{
-        //    var itemId = int.Parse(DataGridBook.SelectedRows[0].Cells[0].Value.ToString());
-        //    return context.Books.Single(bookStock => bookStock.Id == itemId);
-        //}
+        private Book GetSelectedBook()
+        {
+            var itemId = int.Parse(DataGridBook.SelectedRows[0].Cells[0].Value.ToString());
+            return context.Books.Single(bookStock => bookStock.Id == itemId);
+        }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            //var book = GetSelectedBook();
-            //context.Books.Remove(subject);
-            //context.SaveChanges();
-            //DataGridBook.Rows.RemoveAt(DataGridBook.SelectedRows[0].Index);
-            SelectStudentLoanBookForm sb = new SelectStudentLoanBookForm();
+            var book = GetSelectedBook();
+            SelectStudentLoanBookForm sb = new SelectStudentLoanBookForm(book);
             sb.Show();
-
         } 
 
         private void label3_Click(object sender, EventArgs e)
@@ -102,12 +98,14 @@ namespace Library.Views
 
         private void DataGridBook_SelectionChanged(object sender, EventArgs e)
         {
-        //    var book = GetSelectedBook();
-        //    if (book.Status == BookStatus.Disponible)
-        //        btnAction.Text = "Prestar copia";
-        //    else
-        //        btnAction.Text = "Marcar copia como...";
-
+            if (DataGridBook.SelectedRows.Count > 0)
+            {
+                var book = GetSelectedBook();
+                if (book.Status == BookStatus.Disponible)
+                    btnAction.Text = "Prestar copia";
+                else
+                    btnAction.Text = "Marcar copia como...";
+            }
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)

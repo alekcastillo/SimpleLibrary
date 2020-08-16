@@ -1,4 +1,5 @@
 ﻿using Library.Infrastructure;
+using Library.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -45,12 +46,12 @@ namespace Library.Models
             return book;
         }
 
-        public void Lend(int userId) {
-            
-        }
-
-        public void Lend(string userEmail) {
-            
+        public void Lend(Student student)
+        {
+            var context = LibraryContext.GetInstance();
+            student.BorrowedBooks.Add(this);
+            this.Status = BookStatus.Prestado;
+            context.SaveChanges();
         }
 
         public void SetAsLost() {

@@ -18,7 +18,7 @@ namespace Library.Views
         private LibraryContext context { get; set; }
         private IReloadableForm OriginForm { get; set; }
         private bool IsEdit { get; set; }
-        private User User { get; set; }
+        private Student Student { get; set; }
         public AddStudentForm(IReloadableForm originForm)
         {
             context = LibraryContext.GetInstance();
@@ -26,16 +26,16 @@ namespace Library.Views
             OriginForm = originForm;
         }
 
-        public AddStudentForm(User user, IReloadableForm originForm)
+        public AddStudentForm(Student student, IReloadableForm originForm)
         {
             context = LibraryContext.GetInstance();
             InitializeComponent();
             OriginForm = originForm;
             IsEdit = true;
-            User = user;
-            txtName.Text = User.FirstName;
-            txtLastName.Text = User.LastName;
-            txtEmail.Text = User.Email;
+            Student = student;
+            txtName.Text = Student.FirstName;
+            txtLastName.Text = Student.LastName;
+            txtEmail.Text = Student.Email;
             SetTitle();
         }
 
@@ -50,17 +50,17 @@ namespace Library.Views
         {
             if (IsEdit)
             {
-                User.Email = txtEmail.Text;
-                User.FirstName = txtName.Text;
-                User.LastName = txtLastName.Text;
+                Student.Email = txtEmail.Text;
+                Student.FirstName = txtName.Text;
+                Student.LastName = txtLastName.Text;
                 context.SaveChanges();
             }
             else
             {
-                User.Add(
-                txtEmail.Text,
-                txtName.Text,
-                txtLastName.Text); 
+                Student.Add(
+                    txtEmail.Text,
+                    txtName.Text,
+                    txtLastName.Text); 
             }
 
             OriginForm.ReloadDataGrid();
