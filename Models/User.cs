@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,7 +15,6 @@ namespace Library.Models
         [Key]
         public int Id { get; set; }
         public string Email { get; set; }
-        public string Password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public List<Book> BorrowedBooks { get; set; }
@@ -25,14 +25,12 @@ namespace Library.Models
 
         protected User(
             string email,
-            string password,
             string firstName,
             string lastName,
             List<Book> borrowedBooks,
             List<Infraction> infractions)
         {
             Email = email;
-            Password = password;
             FirstName = firstName;
             LastName = lastName;
             BorrowedBooks = borrowedBooks;
@@ -41,18 +39,19 @@ namespace Library.Models
 
         public static User Add(
             string email,
-            string password,
             string firstName,
             string lastName)
         {
+            var context = LibraryContext.GetInstance();
             var user = new User(
                 email,
-                password,
                 firstName,
                 lastName,
                 new List<Book>(),
                 new List<Infraction>());
 
+            context.Users.Add(user);
+            context.SaveChanges();
             return user;
         }
 

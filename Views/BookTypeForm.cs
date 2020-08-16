@@ -36,7 +36,8 @@ namespace Library.Views
         {
             DataGridBookType.Rows.Clear();
             DataGridBookType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            foreach (var booktype in context.BookTypes)
+            foreach (var booktype in context.BookTypes.Include("Subject")
+                .Include("Author").Include("Publisher"))
             {
                 string[] row = { booktype.Id.ToString(), booktype.Title, booktype.Subject.Title,
                     booktype.Author.Title, booktype.Publisher.Title, booktype.Year.ToString(), booktype.Pages.ToString()
@@ -76,6 +77,36 @@ namespace Library.Views
             var bookType = GetSelectedBookType();
             AddBookTypeForm bc = new AddBookTypeForm(bookType, this);
             bc.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFilter_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridBookType_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lbAutores_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

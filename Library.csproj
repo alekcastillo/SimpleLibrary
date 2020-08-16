@@ -15,6 +15,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,7 +28,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -60,10 +60,27 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="S22.Imap">
+      <HintPath>.\S22.Imap.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGrid, Version=9.20.0.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
+      <HintPath>packages\SendGrid.9.20.0\lib\net452\SendGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGrid.SmtpApi, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\SendGrid.SmtpApi.1.3.8\lib\portable40-net40+sl5+win8+wp8+wpa81\SendGrid.SmtpApi.dll</HintPath>
+    </Reference>
+    <Reference Include="StarkbankEcdsa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\starkbank-ecdsa.1.2.0\lib\net452\StarkbankEcdsa.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -106,11 +123,11 @@
     <Compile Include="Views\AddLibros.Designer.cs">
       <DependentUpon>AddLibros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AddEstudianteForm.cs">
+    <Compile Include="Views\AddStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\AddEstudianteForm.Designer.cs">
-      <DependentUpon>AddEstudianteForm.cs</DependentUpon>
+    <Compile Include="Views\AddStudentForm.Designer.cs">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AuthorForm.cs">
       <SubType>Form</SubType>
@@ -131,11 +148,11 @@
       <DependentUpon>EliminarLibro.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IReloadableForm.cs" />
-    <Compile Include="Views\ListaEstudiantesForm.cs">
+    <Compile Include="Views\InfractionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ListaEstudiantesForm.Designer.cs">
-      <DependentUpon>ListaEstudiantesForm.cs</DependentUpon>
+    <Compile Include="Views\InfractionForm.Designer.cs">
+      <DependentUpon>InfractionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ListaLibrosPrestados.cs">
       <SubType>Form</SubType>
@@ -169,6 +186,12 @@
     <Compile Include="Views\PublisherForm.Designer.cs">
       <DependentUpon>PublisherForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\SubjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,8 +216,8 @@
     <EmbeddedResource Include="Views\AddLibros.resx">
       <DependentUpon>AddLibros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\AddEstudianteForm.resx">
-      <DependentUpon>AddEstudianteForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AuthorForm.resx">
       <DependentUpon>AuthorForm.cs</DependentUpon>
@@ -205,8 +228,8 @@
     <EmbeddedResource Include="Views\EliminarLibro.resx">
       <DependentUpon>EliminarLibro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ListaEstudiantesForm.resx">
-      <DependentUpon>ListaEstudiantesForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\InfractionForm.resx">
+      <DependentUpon>InfractionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ListaLibrosPrestados.resx">
       <DependentUpon>ListaLibrosPrestados.cs</DependentUpon>
@@ -222,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PublisherForm.resx">
       <DependentUpon>PublisherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SubjectForm.resx">
       <DependentUpon>SubjectForm.cs</DependentUpon>
@@ -243,7 +269,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -268,4 +294,9 @@
     <PostBuildEvent>
     </PostBuildEvent>
   </PropertyGroup>
+  <Import Project="packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
 </Project>
